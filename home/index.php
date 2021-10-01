@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION['accessid'] == 5) 
 {
-    header("Location: /dashboard_it/index");
+    header("Location: /dashboard_admin/index");
 } 
 elseif ($_SESSION['accessid'] == 4) 
 {
