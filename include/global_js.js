@@ -20,11 +20,12 @@ function exportexcel(table, name)
                 fileext: ".xls"
             });
 }
-function ticket_update(id,reason,button,modelbox_name)
+function ticket_update(id,reason,button,modelbox_name,created_on)
 {
     var id_value = $("#"+id).val();
     var reason_value = $("#"+reason).val();
     var button_value = $("#"+button).val();
+    var created_on_value = $("#"+created_on).val();
     if (reason_value == '')
     {
         input_error_notification(reason,'Reason cannot be blank..!');
@@ -37,7 +38,7 @@ function ticket_update(id,reason,button,modelbox_name)
                 ({
                     type: "POST",
                     url: "../db_page/_model_update_ticket",
-                    data: 'id=' + id_value + '&reason=' + reason_value+ '&action=' + button_value,
+                    data: 'id=' + id_value + '&reason=' + reason_value+ '&action=' + button_value+ '&created_on_value=' + created_on_value,
                     datatype: "html",
                     success: function (result)
                     {

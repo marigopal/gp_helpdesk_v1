@@ -150,6 +150,11 @@
                             <input type="text" class="form-control" name="resolved_ticket_id" id="resolved_ticket_id" placeholder="" >
                             <span id="resolved_ticket_id_check" class="help-block"></span>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputEmail1">Created on</label>
+                            <input type="text" class="form-control" name="resolved_ticket_created_on" id="resolved_ticket_created_on" placeholder="" >
+                            <span id="resolved_ticket_id_check" class="help-block"></span>
+                        </div>
                         <div class="form-group col-md-6 ">
                             <label for="exampleInputEmail1">Solution</label>
                             <textarea class="form-control" rows="5" id="resolved_ticket_reason" name="resolved_ticket_reason" maxlength="150" required="" onclick="input_remove_error_notification('resolved_ticket_reason');"></textarea>
@@ -160,7 +165,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" value="resolved" id="resolved_ticket_model_box_save_button" onclick="ticket_update('resolved_ticket_id','resolved_ticket_reason','resolved_ticket_model_box_save_button','resolved_ticket_model_box');">Save changes</button>
+                <button type="button" class="btn btn-primary" value="resolved" id="resolved_ticket_model_box_save_button" onclick="ticket_update('resolved_ticket_id','resolved_ticket_reason','resolved_ticket_model_box_save_button','resolved_ticket_model_box','resolved_ticket_created_on');">Save changes</button>
                 <span id="success_done" class="help-block"></span>
             </div>
         </div>
@@ -243,6 +248,91 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" value="assign" id="assign_ticket_model_box_save_button" onclick="ticket_update('assignto_ticket_id','assignto_ticket_userlist','assign_ticket_model_box_save_button','assign_ticket_model_box');">Save changes</button>
                 <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Ticket report model box-->
+<div class="modal fade" id="report_ticket_model_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Ticket Report</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Category</label>
+                            <input type="text" class="form-control" id="report_ticket_category" name="report_ticket_category" >
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Priority</label>
+                            <input type="text" class="form-control" id="report_ticket_priority" name="report_ticket_priority">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Status</label>
+                            <input type="text" class="form-control" id="report_ticket_status" name="report_ticket_status">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Time Taken</label>
+                            <input type="text" class="form-control" id="report_ticket_time_taken" name="report_ticket_time_taken">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Created Time</label>
+                            <input type="text" class="form-control" id="report_ticket_created_on" name="report_ticket_created_on">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Created By</label>
+                            <input type="text" class="form-control" id="report_ticket_created_by" name="report_ticket_created_by">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Assignt By</label>
+                            <input type="text" class="form-control" id="report_ticket_assigned_by" name="report_ticket_assigned_by">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Assigned To</label>
+                            <input type="text" class="form-control" id="report_ticket_assigned_to" name="report_ticket_assigned_to">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Subject</label>
+                            <input type="text" class="form-control" id="report_ticket_subject" name="report_ticket_subject">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Description</label>
+                            <textarea class="form-control" rows="5" id="report_ticket_description" name="report_ticket_description" maxlength="150" required=""></textarea>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Hold Time</label>
+                            <input type="text" class="form-control" id="report_ticket_hold_on" name="report_ticket_hold_on">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Hold Reason</label>
+                            <textarea class="form-control" rows="5" id="report_ticket_hold_reason" name="report_ticket_hold_reason" maxlength="150" required=""></textarea>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Observation Time</label>
+                            <input type="text" class="form-control" id="report_ticket_observation_tim" name="report_ticket_observation_tim">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Observation Reason</label>
+                            <textarea class="form-control" rows="5" id="report_ticket_observation_reason" name="report_ticket_observation_reason" maxlength="150" required=""></textarea>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Resolved Time</label>
+                            <input type="text" class="form-control" id="report_ticket_resolved_on" name="report_ticket_resolved_on">
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Solution</label>
+                            <textarea class="form-control" rows="5" id="report_ticket_resolved_reason" name="report_ticket_resolved_reason" maxlength="150" required=""></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

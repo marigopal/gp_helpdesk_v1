@@ -4,7 +4,7 @@ $user = $_SESSION['user_uid'];
 $category = $_POST['category'];
 $priority = $_POST['priority'];
 $subject = $_POST['subject'];
-$description = $_POST['description'];
+$current_date_time = date('Y-m-d H:i:s');
 $img = $_FILES['image']['name'];
 if ($img != '') {
     $tmp = $_FILES['image']['tmp_name'];
@@ -44,9 +44,10 @@ function insert() {
     global $user;
     global $newfilename;
     global $con;
+    global $current_date_time;
     $query = "INSERT INTO `tbl_helpdesk`(`category_id`, `priority_id`, `subject`, `description`, "
             . "`created_by`, `created_on`, `status_id`, `screenshot_name`) VALUES ('$category','$priority','$subject','$description',"
-            . "'$user',now(),'1','$newfilename')";
+            . "'$user','$current_date_time','1','$newfilename')";
     if ($result = $con->query($query)) {
         echo "<script>
                 alert('Ticket Added Successfully');

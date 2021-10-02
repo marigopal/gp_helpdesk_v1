@@ -3,7 +3,10 @@ include('../../include/lib_page.php');
 $id = $_POST['id'];
 $reason = $_POST['reason'];
 $action = $_POST['action'];
+$created_on = $_POST['created_on_value'];
+$result = diff_dates($created_on);
 $user_uid = $_SESSION['user_uid'];
+
 if($action == 'delete');
 {
     $sql = "UPDATE `tbl_helpdesk` SET `status_id`='4',`deleted_by`='$user_uid',`deleted_on`=now(),`deleted_reason`='$reason' WHERE `id` = '$id'";
@@ -24,7 +27,7 @@ if($action == 'observation')
 
 if($action == 'resolved')
 {
-    $sql = "UPDATE `tbl_helpdesk` SET `status_id`='3',`resolved_by`='$user_uid',`resolved_on`=now(),`solution`='$reason' WHERE `id` = '$id'";
+    $sql = "UPDATE `tbl_helpdesk` SET `status_id`='3',`resolved_by`='$user_uid',`resolved_on`=now(),`solution`='$reason',`time_taken`='$result' WHERE `id` = '$id'";
     $sql_log ="INSERT INTO `tbl_helpdesk_log`(`helpdesk_id`, `status_id`, `done_by`, `done_on`) VALUES ('$id','3','$user_uid',now())";
 
 }
@@ -34,6 +37,8 @@ if($action == 'assign')
     $sql_log ="INSERT INTO `tbl_helpdesk_log`(`helpdesk_id`, `status_id`, `done_by`, `done_on`) VALUES ('$id','2','$user_uid',now())";
 
 }
+//echo $sql;
+//exit();
 if ((mysqli_query($con, $sql) && (mysqli_query($con, $sql_log)))) {
     echo "Ticket Updated Successfully";
 } else {

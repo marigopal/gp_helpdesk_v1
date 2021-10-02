@@ -43,13 +43,14 @@
             </li>-->
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-laptop"></i> <span>Helpdesk</span>
+                    <i class="fa fa-ticket"></i> <span>Helpdesk</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/helpdesk_report/index"><i class="fa fa-circle-o"></i>Tickets Report</a></li>
+                    <li><a href="/helpdesk_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
 <!--            <li class="treeview">

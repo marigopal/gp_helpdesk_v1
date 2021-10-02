@@ -1,3 +1,11 @@
+<?php
+ if ($_SESSION['accessid'] == '5') {
+    $created_by = "and created_by != 'null' ";
+} else if ($_SESSION['accessid'] == '3'){
+    $created_by = $_SESSION['user_uid'];
+    $created_by = "and created_by= ".$_SESSION['user_uid']." ";
+}
+?>
 <section class="content-header">
     <div class="row">
         <div class="col-md-2 col-sm-6 col-xs-12">
@@ -7,7 +15,8 @@
                     <span class="info-box-text">Completed</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='3'";
+
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='3' $created_by  ";
 
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
@@ -31,7 +40,7 @@
                     <span class="info-box-text">Inprogress</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='1'";
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='1' $created_by";
 
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
@@ -55,7 +64,7 @@
                     <span class="info-box-text">Assigned</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='2'";
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='2' $created_by";
 
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
@@ -79,7 +88,7 @@
                     <span class="info-box-text">Hold</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='6'";
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='6' $created_by";
 
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
@@ -102,7 +111,7 @@
                     <span class="info-box-text">Observation</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='5'";
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='5' $created_by";
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
@@ -125,7 +134,7 @@
                     <span class="info-box-text">Deleted</span>
                     <span class="info-box-number">
                         <?php
-                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  `created_by`=" . $_SESSION['user_uid'] . " and status_id ='4'";
+                        $sql = "select Count( * ) Countr, status_id FROM tbl_helpdesk where  status_id ='4' $created_by";
                         $result = mysqli_query($con, $sql);
                         if (mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
