@@ -5,7 +5,7 @@
         <li><a href="/home/index"><i class="fa fa-dashboard"></i> <span>Dashboard Users</span></a></li>
         <li class="treeview">
             <a href="#">
-                <i class="fa fa-ticket"></i> <span>Helpdesk</span>
+                <i class="fa fa-book"></i> <span>Helpdesk</span>
                 <span class="pull-right-container">
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>

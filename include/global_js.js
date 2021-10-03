@@ -43,7 +43,7 @@ function ticket_update(id,reason,button,modelbox_name,created_on)
                     success: function (result)
                     {
                         hide(modelbox_name);
-                        location.reload();
+                        window.location.href = "/helpdesk_report/index";
                     }
                 });
     }
@@ -58,10 +58,55 @@ function hide(id)
 {
     $("#"+id).modal('hide');
 }
+function remove_hidden(id)
+{
+    $("#"+id).removeAttr('hidden');
+}
+function remove_input_value(id)
+{
+    $("#"+id).val('');
+}
+function email_validation(email)
+{
+var email_id = $("#email").val();
+    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (!expr.test(email_id))
+    {
+        $("#"+email).parent('div').removeClass('has-success').addClass('has-error');
+        $("#"+email+"_check").html('Entered email id is not valid..!');
+        $("#"+email).focus();
+        
+    }
+}
 function input_remove_error_notification(id)
 {
     $("#"+id).parent('div').removeClass('has-success').removeClass('has-error');
     $("#"+id+"_check").html('');
     $("#"+id).focus();
+}
+function user_access_change(users_change_access_uid,users_change_access_name)
+{
+    var id_value = $("#"+users_change_access_uid).val();
+    var users_change_access_name_value = $("#"+users_change_access_name).val();
+    if(users_change_access_name_value == '')
+    {
+        input_error_notification(users_change_access_name,'Should Select One..!');
+        return false;
+    }
+    else
+    {
+        $.ajax
+                ({
+                    type: "POST",
+                    url: "../db_page/_user_change_access",
+                    data: 'id=' + id_value + '&users_change_access_name_value=' + users_change_access_name_value,
+                    datatype: "html",
+                    success: function (result)
+                    {
+                        window.location.href = "/users_report/index_page/index";
+                    }
+                });
+    }
+
 }
 

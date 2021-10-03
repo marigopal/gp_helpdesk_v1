@@ -4,7 +4,7 @@ include "../../include/db_config.php";
 include '../../include/encryption_function.php';
 $username = $_POST['login_username'];
 $password = encrypt($_POST['login_password']);
-$sql = "SELECT * FROM tbl_users where username ='$username' and password ='$password'";
+$sql = "SELECT * FROM tbl_users where username ='$username' and password ='$password' and status_id ='1'";
 $query = $con->query($sql);
 $result_array = mysqli_fetch_array($query);
 $result_numrows = mysqli_num_rows($query);

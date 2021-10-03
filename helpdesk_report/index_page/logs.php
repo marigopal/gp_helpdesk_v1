@@ -9,7 +9,7 @@ include ("../../include/menu/menu.php");
         <ol class="breadcrumb">
             <li><a href="/home/index"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="/helpdesk_report/index"><i class="fa fa-book"></i> Helpdesk Report</a></li>
-            <li><a class="active""><i class="fa fa-book"></i> Logs Report</a></li>
+            <li><a class="active""><i class="fa fa-history"></i> Logs Report</a></li>
         </ol>
     </section>
     <section class="content">
@@ -18,7 +18,7 @@ include ("../../include/menu/menu.php");
                 <div class="box">
                     <div class="box-header bg-green-active">
                         <a href="../create_ticket/index"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" title="New"></a>
-                        <a onclick="exportexcel('logs_ticket_table', 'ticket_report')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
+                        <a onclick="exportexcel('logs_ticket_table', 'ticket-log-report')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
                     </div>
                     <div class="box-body table-responsive no-padding">
                         <table class="table table-hover" style="padding-bottom: 50px;" id="logs_ticket_table">
@@ -31,7 +31,6 @@ include ("../../include/menu/menu.php");
                                 ?>
                                 <tr>
                                     <th>Sl No</th>
-                                    <th hidden="">Unique ID</th>
                                     <th>Ticket ID</th>
                                     <th>Status</th>
                                     <th>Done By</th>

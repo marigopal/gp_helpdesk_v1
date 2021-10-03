@@ -1,3 +1,13 @@
+<?php
+$count_notification = 0;
+$sql = "select status_id FROM `tbl_helpdesk` where  status_id='1'";
+if ($result=mysqli_query($con,$sql))
+{
+    $rowcount_ticket=mysqli_num_rows($result);
+    $count_notification = $count_notification + $rowcount_ticket;
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +24,20 @@
         <link rel="stylesheet" href="../../template_files/dist/css/AdminLTE.min.css">
         <link rel="stylesheet" href="../../template_files/dist/css/skins/_all-skins.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <style>
+        .blink_me 
+        {
+          animation: blinker 1s linear infinite;
+      }
+
+      @keyframes blinker 
+      {
+          50% 
+          {
+            opacity: 0;
+        }
+    }
+        </style>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
@@ -31,16 +55,28 @@
                     </a>
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
+                            <?php if ($_SESSION['accessid'] =='5')
+                            {
+                            ?>
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 <?php
 
+                                 if($count_notification != 0)
+                                 {
+                                    echo '<i class="fa fa-bell-o blink_me"></i>';
+                                    echo '<span class="label label-danger blink_me">';   
+                                    echo $count_notification;
+                                    echo '</span>';
+                                }
+                                ?>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header bg-green">You have  notifications</li>
+                                    <li class="header bg-green">You have <?php echo $count_notification;?> notifications</li>
                                     <li>
                                         <ul class="menu">
                                             <li >
-                                                <a class="" href="/it_pages/ticket_inprogress.php"> Ticket Inprogress  <span class="pull-right badge bg-red"></span></a>
+                                                <a class="" href="/helpdesk_report/index_page/index?filter=<?= encrypt("1") ?>"> Ticket inprogress  <span class="pull-right badge bg-red"><?php echo $rowcount_ticket; ?></span></a>
                                             </li>
                                             <li>
 
@@ -48,6 +84,7 @@
                                     </li>
                                 </ul>
                             </li>
+                        <?php }?>
                             <li class="">
                                 <a href="/helpdesk_report/create_ticket/index" >
                                     <i class="fa fa-plus"> Create Ticket</i>
@@ -68,7 +105,7 @@
                                     </li>
                                     <li class="user-footer">
                                         <div class="pull-left">
-                                            <a href="/users_mgnt/profile_update.php?u_id=<?php echo $_SESSION['user_uid']; ?>" class="btn btn-default btn-flat">Profile</a>
+                                            <a href="/users_report/edit_users/index?id=<?php echo encrypt($_SESSION['user_uid']); ?>" class="btn btn-default btn-flat">Profile</a>
                                         </div>
                                         <div class="pull-right">
                                             <a href="/include/logout.php" class="btn btn-default btn-flat">Sign out</a>

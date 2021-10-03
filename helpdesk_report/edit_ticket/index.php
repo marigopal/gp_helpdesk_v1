@@ -20,7 +20,7 @@ $data = mysqli_fetch_array($result);
                     <div class="box box-info">
                         <div class="col-md-6">
                             <div class="box-body">
-                                <div class="form-group" id="unique_id">
+                                <div class="form-group" id="unique_id" hidden="">
                                     <label >Unique ID<span class="required text-red">*</span></label>
                                     <input type="text" class="form-control"  name="u_id" id="u_id" value="<?php echo $id; ?>" readonly="">
                                     <span id="sub_domain_name_check" class="help-block"></span>

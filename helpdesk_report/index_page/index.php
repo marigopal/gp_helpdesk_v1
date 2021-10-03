@@ -32,6 +32,7 @@ include ("../../include/menu/menu.php");
                                 <tr>
                                     <th>Sl No</th>
                                     <th hidden="">Unique ID</th>
+                                    <th>Ticket ID</th>
                                     <th>Created On</th>
                                     <th>Category</th>
                                     <th>Priority</th>

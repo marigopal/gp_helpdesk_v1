@@ -4,6 +4,8 @@ $user = $_SESSION['user_uid'];
 $category = $_POST['category'];
 $priority = $_POST['priority'];
 $subject = $_POST['subject'];
+$description = $_POST['description'];
+$ticket_id = strtoupper (uniqid("GP"));
 $current_date_time = date('Y-m-d H:i:s');
 $img = $_FILES['image']['name'];
 if ($img != '') {
@@ -45,8 +47,9 @@ function insert() {
     global $newfilename;
     global $con;
     global $current_date_time;
-    $query = "INSERT INTO `tbl_helpdesk`(`category_id`, `priority_id`, `subject`, `description`, "
-            . "`created_by`, `created_on`, `status_id`, `screenshot_name`) VALUES ('$category','$priority','$subject','$description',"
+    global $ticket_id;
+    $query = "INSERT INTO `tbl_helpdesk`(`ticket_id`,`category_id`, `priority_id`, `subject`, `description`, "
+            . "`created_by`, `created_on`, `status_id`, `screenshot_name`) VALUES ('$ticket_id','$category','$priority','$subject','$description',"
             . "'$user','$current_date_time','1','$newfilename')";
     if ($result = $con->query($query)) {
         echo "<script>

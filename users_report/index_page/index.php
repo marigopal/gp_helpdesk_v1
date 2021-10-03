@@ -11,7 +11,7 @@ include '../../include/menu/menu.php';
             <li><a class="active"><i class="fa fa-book"></i> Users Report</a></li>
         </ol>
     </section>
-    <?php include ("widget_page_helpdeskreport.php"); ?>
+    <?php include ("../viewlist_page/_index_widget_count.php"); ?>
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -38,6 +38,7 @@ include '../../include/menu/menu.php';
                                     <th>Email Address</th>
                                     <th>Username</th>
                                     <th>Default Access</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
