@@ -20,34 +20,7 @@ function exportexcel(table, name)
                 fileext: ".xls"
             });
 }
-function ticket_update(id,reason,button,modelbox_name,created_on)
-{
-    var id_value = $("#"+id).val();
-    var reason_value = $("#"+reason).val();
-    var button_value = $("#"+button).val();
-    var created_on_value = $("#"+created_on).val();
-    if (reason_value == '')
-    {
-        input_error_notification(reason,'Reason cannot be blank..!');
-        return false;
-        
-    }
-    else
-    {
-        $.ajax
-                ({
-                    type: "POST",
-                    url: "../db_page/_model_update_ticket",
-                    data: 'id=' + id_value + '&reason=' + reason_value+ '&action=' + button_value+ '&created_on_value=' + created_on_value,
-                    datatype: "html",
-                    success: function (result)
-                    {
-                        hide(modelbox_name);
-                        window.location.href = "/helpdesk_report/index";
-                    }
-                });
-    }
-}
+
 function input_error_notification(input,msg)
 {
     $("#"+input).parent('div').removeClass('has-success').addClass('has-error');
@@ -84,29 +57,5 @@ function input_remove_error_notification(id)
     $("#"+id+"_check").html('');
     $("#"+id).focus();
 }
-function user_access_change(users_change_access_uid,users_change_access_name)
-{
-    var id_value = $("#"+users_change_access_uid).val();
-    var users_change_access_name_value = $("#"+users_change_access_name).val();
-    if(users_change_access_name_value == '')
-    {
-        input_error_notification(users_change_access_name,'Should Select One..!');
-        return false;
-    }
-    else
-    {
-        $.ajax
-                ({
-                    type: "POST",
-                    url: "../db_page/_user_change_access",
-                    data: 'id=' + id_value + '&users_change_access_name_value=' + users_change_access_name_value,
-                    datatype: "html",
-                    success: function (result)
-                    {
-                        window.location.href = "/users_report/index_page/index";
-                    }
-                });
-    }
 
-}
 

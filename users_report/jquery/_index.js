@@ -10,3 +10,28 @@ $.ajax({
         $('#_index_users_report').html(data);
     }
 });
+function user_access_change(users_change_access_uid,users_change_access_name)
+{
+    var id_value = $("#"+users_change_access_uid).val();
+    var users_change_access_name_value = $("#"+users_change_access_name).val();
+    if(users_change_access_name_value == '')
+    {
+        input_error_notification(users_change_access_name,'Should Select One..!');
+        return false;
+    }
+    else
+    {
+        $.ajax
+                ({
+                    type: "POST",
+                    url: "../db_page/_user_change_access",
+                    data: 'id=' + id_value + '&users_change_access_name_value=' + users_change_access_name_value,
+                    datatype: "html",
+                    success: function (result)
+                    {
+                        window.location.href = "/users_report/index_page/index";
+                    }
+                });
+    }
+
+}
