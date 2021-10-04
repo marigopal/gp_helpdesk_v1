@@ -80,5 +80,8 @@ var email_id_value = $("#email").val();
         
     }
 }
-
-
+function ValidateDate(next_renewal)
+{
+    var dtRegex = new RegExp(/^\d{4}-\d{2}-\d{2}$/);
+    return dtRegex.test(next_renewal);
+}

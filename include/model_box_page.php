@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group col-md-6 ">
                             <label for="exampleInputEmail1">Next Renewal Date [YYYY-MM-DD]</label>
-                            <input type="text" class="form-control" id="next_renewal" name="next_renewal" value="<?php echo date("Y-m-d") ?>">
+                            <input type="text" class="form-control" id="next_renewal" name="next_renewal" value="<?php echo date("Y-m-d") ?>" onclick="input_remove_error_notification('next_renewal');">
 
                             <span id="next_renewal_check" class="help-block"></span>
                         </div>
