@@ -4,6 +4,19 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li><a href="/home/index"><i class="fa fa-dashboard"></i> <span>Dashboard IT</span></a></li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>Vendor</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/vendor_report/index_page/index"><i class="fa fa-circle-o"></i>Vendor Accounts</a></li>
+<!--                    <li><a href="/vendor_report/index_page/index"><i class="fa fa-circle-o"></i>Vendor Profile list</a></li>-->
+                    <li><a href="/vendor_report/logs_page/index"><i class="fa fa-circle-o"></i>Logs</a></li>
+                </ul>
+            </li>
 <!--            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-user-circle"></i> <span>Domain</span>
@@ -17,18 +30,7 @@
                     <li><a href="/domain/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-user"></i> <span>Account</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="/account/index"><i class="fa fa-circle-o"></i>Account List</a></li>
-                    <li><a href="/account/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
-                </ul>
-            </li>
+            
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-server"></i> <span>Server</span>
