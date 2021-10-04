@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Developed by Mariappan G
+    <strong>Copyright © 2021 GP Global Soft Tech Pvt Ltd
 </footer>
 <script src="../../template_files/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
