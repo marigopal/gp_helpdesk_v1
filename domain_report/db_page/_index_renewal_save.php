@@ -12,7 +12,7 @@ WHERE id='$u_id' ";
 if ($result = $con->query($sql)) {
     $update = "UPDATE `tbl_domain` SET `expiredate`='$next_renewal',`domain_autorenewal`='$auto_renewal' WHERE `id` ='$u_id' ";
     if ($result1 = $con->query($update)) {
-        echo "Renewal Successfully Updated...! Have a Nice Day..!";
+        echo '1';
     }
 } else {
     echo "You are entered information may be wrong..! Please try againg some times..!";

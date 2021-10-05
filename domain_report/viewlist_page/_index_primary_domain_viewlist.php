@@ -28,17 +28,14 @@ if ($result->num_rows > 0) {
                                                 $('#renewal_id').val('<?= $row[0]; ?>')
                                                 $('#next_renewal').val('<?= $row['expiredate'] ?>');
                                         ">Renewed</a></li>
-                                        <li><a href="../edit_domain/edit_primary_domain?id=<?php echo $row[0]; ?>">Edit</a></li>
-                                <li><a href="index_delete_domain?id=<?php echo encrypt($row[0]); ?> &domain=<?php echo encrypt($row[11]); ?>">Delete</a></li>
+                                        <li><a href="../edit_domain/edit_primary_domain?id=<?php echo encrypt($row[0]); ?>">Edit</a></li>
+                                        <li><a href="../db_page/_delete_primary_domain?id=<?php echo encrypt($row[0]); ?> &domain=<?php echo encrypt($row[11]); ?>">Delete</a></li>
                             </ul>
                         </div> 
                     </td>
         </tr>
         <?php
     }
-} else {
-    echo '<span style="color:green;text-align:center;">There is no records available..!</span>';
-}
-mysqli_close($con);
+} mysqli_close($con);
 ?>
   

@@ -2,6 +2,9 @@
 include ("../../include/menu/menu.php");
 ?>
 <div class="content-wrapper">
+    <div class="alert alert-success" hidden="" id="alert_notification">
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
     <section class="content-header">
         <h1>Primary Domain Report</h1>
         <ol class="breadcrumb">
@@ -15,7 +18,7 @@ include ("../../include/menu/menu.php");
             <div class="col-xs-12">
                 <div class="box ">
                     <div class="box-header bg-green-active">
-                        <a href="create_domain"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" title="New"></a>
+                        <a href="../create_domain/index"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" title="New"></a>
                         <a onclick="exportexcel('_index_primary_domain_table', 'primary_domain_report')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
                     </div>
                     <div class="box-body table-responsive no-padding">

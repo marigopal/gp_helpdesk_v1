@@ -31,9 +31,21 @@ $("#renewed_model_box_save_button").click(function ()
                 datatype: "html",
                 success: function (result)
                 {
-                    $('#renewed_model_box').modal('hide');
-                    alert(result);
-                    location.reload();
+                   if (result == 1)
+                   {
+                       $('#renewed_model_box').modal('hide');
+                      success_alert('alert_notification','Renewal Updated Successfulkly..!');
+                      setTimeout(function () {
+                           window.location.href = "/domain_report/index_page/index";
+                       }, 3000);
+                   }
+                   else
+                   {
+                       danger_alert('alert_notification','Somthing Went problem..!');
+                       setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index";
+                       }, 3000);
+                   }
                 }
             });
 });

@@ -1,11 +1,14 @@
 <?php
 include ("../../include/menu/menu.php");
-$id = $_GET['id'];
-$sql = "SELECT tbl_domain.id,tbl_domain.vendor,tbl_vendor.id,tbl_vendor.name, tbl_domain.account,tbl_account.id,tbl_account.username,tbl_domain.expiredate,tbl_domain.domain_autorenewal,tbl_autorenewal.id,tbl_autorenewal.autorenewal,tbl_domain.domainname,tbl_domain.remarks from tbl_domain INNER JOIN tbl_vendor on tbl_vendor.id=tbl_domain.vendor INNER JOIN tbl_account ON tbl_account.id = tbl_domain.account INNER JOIN tbl_autorenewal on tbl_autorenewal.id = tbl_domain.domain_autorenewal and tbl_domain.id = '$id'";
+$id = decrypt($_GET['id']);
+$sql = "SELECT tbl_domain.id,tbl_domain.vendor,tbl_vendor.id,tbl_vendor.name, tbl_domain.account,tbl_account.id,tbl_account.username,tbl_domain.expiredate,tbl_domain.domain_autorenewal,tbl_autorenewal.id,tbl_autorenewal.autorenewal,tbl_domain.domainname,tbl_domain.remarks,tbl_domain.point_to from tbl_domain INNER JOIN tbl_vendor on tbl_vendor.id=tbl_domain.vendor INNER JOIN tbl_account ON tbl_account.id = tbl_domain.account INNER JOIN tbl_autorenewal on tbl_autorenewal.id = tbl_domain.domain_autorenewal and tbl_domain.id = '$id'";
 $result = mysqli_query($con, $sql); // select query
 $data = mysqli_fetch_array($result);
 ?>
 <div class="content-wrapper">
+    <div class="alert alert-success" hidden="" id="alert_notification">
+    <strong>Success!</strong> This alert box could indicate a successful or positive action.
+  </div>
     <section class="content-header">
         <h1>Edit Primary Domain</h1>
         <ol class="breadcrumb">
@@ -15,7 +18,7 @@ $data = mysqli_fetch_array($result);
         </ol>
     </section>
     <section class="content">
-        <form id="form" action="edit_domain_save.php" method="post" enctype="multipart/form-data">
+        <form id="form">
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-info">
@@ -30,6 +33,11 @@ $data = mysqli_fetch_array($result);
                                     <label >Domain Name<span class="required text-red">*</span></label>
                                     <input type="text" class="form-control"  name="domain_name" id="domain_name" value="<?php echo $data[11] ?>" required="" readonly="">
                                     <span id="domain_name_check" class="help-block"></span>
+                                </div>
+                                <div class="form-group" id="point_to_div">
+                                    <label >Point To<span class="required text-red">*</span></label>
+                                    <input type="text" class="form-control"  name="point_to" id="point_to" value="<?php echo $data[13] ?>" required="">
+                                    <span id="point_to_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group " id="vendor_div">
                                     <label>Vendor<span class="required text-red">*</span></label>
@@ -99,3 +107,5 @@ $data = mysqli_fetch_array($result);
     </section>
 </div>
 <?php include ('../../include/footer.php'); ?>
+<script src="../jquery/_common.js" type="text/javascript"></script>
+<script src="../jquery/_edit_domain.js" type="text/javascript"></script>
