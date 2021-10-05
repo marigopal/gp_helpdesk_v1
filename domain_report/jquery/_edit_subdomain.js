@@ -14,7 +14,7 @@ $( "form" ).on( "submit", function(e) {
                    {
                       success_alert('alert_notification','Domain Updated Successfulkly..!');
                       setTimeout(function () {
-                           window.location.href = "/domain_report/index_page/index";
+                           window.location.href = "/domain_report/index_page/index_sub_records";
                        }, 3000);
                    }
                    else

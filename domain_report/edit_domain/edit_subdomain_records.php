@@ -20,15 +20,15 @@ $data = mysqli_fetch_array($result);
                     <div class="box box-info">
                         <div class="col-md-6">
                             <div class="box-body">
-                                <div class="form-group" id="unique_id_div" >
+                                <div class="form-group" id="unique_id_div" hidden="">
                                     <label >Unique ID<span class="required text-red">*</span></label>
                                     <input type="text" class="form-control"  name="id" id="id" value="<?php echo $data[0]; ?>" readonly="">
                                     <span id="uid_check" class="help-block"></span>
                                 </div>
-                                <div class="form-group" id="domain_name_div">
+                                <div class="form-group" id="type_div" hidden="">
                                     <label >Type<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="domain_name" id="domain_name" value="<?php echo $data[2] ?>"  readonly="">
-                                    <span id=domain_name_check" class="help-block"></span>
+                                    <input type="text" class="form-control"  name="type" id="type" value="<?php echo $data[1] ?>"  readonly="">
+                                    <span id=type_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group" id="domain_name_div">
                                     <label >Domain Name<span class="required text-red">*</span></label>
