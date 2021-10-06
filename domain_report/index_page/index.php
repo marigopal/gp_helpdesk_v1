@@ -2,9 +2,6 @@
 include ("../../include/menu/menu.php");
 ?>
 <div class="content-wrapper">
-    <div class="alert alert-success" hidden="" id="alert_notification">
-    <strong>Success!</strong> This alert box could indicate a successful or positive action.
-  </div>
     <section class="content-header">
         <h1>Primary Domain Report</h1>
         <ol class="breadcrumb">

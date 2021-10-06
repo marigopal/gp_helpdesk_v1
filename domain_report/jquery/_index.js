@@ -34,11 +34,12 @@ $("#renewed_model_box_save_button").click(function ()
                    if (result == 1)
                    {
                        $('#renewed_model_box').modal('hide');
-                      success_alert('alert_notification','Renewal Updated Successfulkly..!');
-                      setTimeout(function () {
-                           window.location.href = "/domain_report/index_page/index";
-                       }, 3000);
-                   }
+                       toastr.success('Renewal Updated Successfully!');
+                        
+                        setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index";
+                        }, 2000);
+                    }
                    else
                    {
                        danger_alert('alert_notification','Somthing Went problem..!');

@@ -24,6 +24,9 @@ if ($result=mysqli_query($con,$sql))
         <link rel="stylesheet" href="../../template_files/dist/css/AdminLTE.min.css">
         <link rel="stylesheet" href="../../template_files/dist/css/skins/_all-skins.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="../../template_files/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../template_files/toastr/toastr.min.css">
         <style>
         .blink_me 
         {

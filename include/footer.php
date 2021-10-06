@@ -13,6 +13,10 @@
 <script src="../../template_files/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap-clockpicker/dist/bootstrap-clockpicker.min.js"></script>
+<script src="../../template_files/sweetalert2/sweetalert2.min.js"></script>
+<!-- Toastr -->
+<script src="../../template_files/toastr/toastr.min.js"></script>
+<script src="../../template_files/toast_js/toast_function.js"></script>
 <script>
     $(function () {
         $('#example1').DataTable()
