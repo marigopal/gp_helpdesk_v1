@@ -90,21 +90,21 @@ function empty_check(id,msg)
     }
 }
 
-function email_validation(email)
+function email_validation(email,msg)
 {
-var email_id_value = $("#email").val();
+var email_id_value = $("#"+email).val();
     var expr = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (!expr.test(email_id_value))
     {
         $("#"+email).parent('div').removeClass('has-success').addClass('has-error');
-        $("#"+email+"_check").html('Entered email id is not valid..!');
+        $("#"+email+"_check").html(msg);
         $("#"+email).focus();
         
     }
 }
 function domain_name_validation(domain_name)
 {
-var domain_name_value = $("#domain_name").val();
+var domain_name_value = $("#"+domain_name).val();
      if (!/([a-z0-9-]+\.[a-zA-Z]{2,})(?:\/|$)/.test(domain_name_value))
     {
         $("#"+domain_name).parent('div').removeClass('has-success').addClass('has-error');

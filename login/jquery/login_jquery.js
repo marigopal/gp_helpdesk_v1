@@ -17,7 +17,7 @@ $( "form" ).on( "submit", function(e)
                     }
                    else 
                    {    
-                        toastr.error('Wrong Credential..!Please tray again..!');
+                        toastr.error('Wrong Credential..!');
                         add_disabled('login_submit');  
                         setTimeout(function () {
                             window.location.reload();

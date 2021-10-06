@@ -13,14 +13,14 @@ $( "form" ).on( "submit", function(e)
                         toastr.success('Register was successfully..!');
                         setTimeout(function () {
                             window.location.href = "/login/login_page/index";
-                        }, 1000);
+                        }, 1500);
                     }
                    else 
                    {
                         toastr.error('Something went wrong..!');
                         setTimeout(function () {
                             window.location.reload();
-                        }, 1000);
+                        }, 1500);
                     }
                 }
     });
@@ -39,7 +39,7 @@ $( "form" ).on( "submit", function(e)
                 {
                     if (result == 1)
                     {
-                       toastr.error('Username Already Taken..!'); 
+                       input_error_notification ('username','Username already used..!');
                        add_disabled('create_submit');
                        return false;
                     }
@@ -52,6 +52,6 @@ $( "form" ).on( "submit", function(e)
 });
 $("#email_id").change(function()
 {
-    email_validation('email_id','Email format is invalid..!');
+    email_validation('email_id','Email address format not valid');
     return false;
 });

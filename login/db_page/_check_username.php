@@ -1,5 +1,5 @@
 <?php
-include '../../include/db_config.php';
+include '../../include/lib_page.php';
 $username = $_POST['username'];
 $sql = "SELECT username FROM tbl_users WHERE username = '$username'";
 $res = mysqli_query($con, $sql);
