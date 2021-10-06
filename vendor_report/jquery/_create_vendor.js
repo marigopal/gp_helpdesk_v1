@@ -1,3 +1,33 @@
+$( "form" ).on( "submit", function(e) 
+{
+    var dataString = $(this).serialize();   
+    $.ajax({
+      type: "POST",
+      url: "../db_page/_insert_vendor",
+      data: dataString,
+      success: function (result)
+                {
+                    alert(result);
+                   if(result == 1)
+                   {    
+                        add_disabled('create_account_button');
+                        toastr.success('Vendor Account Added..!');
+                        setTimeout(function () {
+                            window.location.href = "/home/index";
+                        }, 2000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Wrong Credential..!Please tray again..!');
+                        add_disabled('create_account_button');  
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    }
+                }
+    });
+    e.preventDefault();
+ });
 $("#account_no").change(function ()
 {
     var account_no = $("#account_no").val();
@@ -12,12 +42,12 @@ $("#account_no").change(function ()
                 {
                     if (result == 0)
                     {
-                        input_success_notification('account_no','Account name is Available..!');
+                        input_success_notification('account_no','Account name is Valid..!');
                         remove_disabled('create_account_button');
                         return false;
                     } else if (result == 1)
                     {
-                        input_error_notification('account_no','Account name you entered already exists..!');
+                        input_error_notification('account_no','Account name already exists..!');
                         add_disabled('create_account_button');
                         return false;
                     }
@@ -47,12 +77,12 @@ $("#username").change(function ()
                 {
                     if (result == 0)
                     {
-                        input_success_notification('username','Username name is Available..!');
+                        input_success_notification('username','Username name is Valid..!');
                         remove_disabled('create_account_button');
                         return false;
                     } else if (result == 1)
                     {
-                        input_error_notification('username','Username name you entered already exists..!');
+                        input_error_notification('username','Username name already exists..!');
                         add_disabled('create_account_button');
                         return false;
                     }

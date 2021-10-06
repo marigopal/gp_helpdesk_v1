@@ -1,78 +1,92 @@
-<?php
-include ("../../include/menu/menu.php");
-$id = decrypt($_GET['id']);
-
-$sql = "SELECT tbl_users.id,tbl_users.firstname,tbl_users.lastname,tbl_users.email,tbl_users.username,tbl_users.password FROM tbl_users WHERE tbl_users.id = '$id'";
-$result = mysqli_query($con, $sql); // select query
-$data = mysqli_fetch_array($result);
-?>
+<?php include '../../include/menu/menu.php';?>
 <div class="content-wrapper">
     <section class="content-header">
-        <h1>Edit User Profile</h1>
-
-        <ol class="breadcrumb">
-            <li><a href="/home/index"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a class="active">Edit User Profile</a></li>
-        </ol>
+      <h1>
+        User Profile
+      </h1>
+      <ol class="breadcrumb">
+          <li><a href="/home/index"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">User profile</li>
+      </ol>
     </section>
     <section class="content">
-        <form id="form" action="../db_page/_user_profile_update.php" method="post" enctype="multipart/form-data">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="box box-info">
-                        <div class="col-md-6">
-                            <div class="box-body">
-                                <div class="form-group" id="unique_id_div" hidden="">
-                                    <label >Unique ID<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="u_id" id="u_id" value="<?php echo $id; ?>" readonly="">
-                                    <span id="u_id_check" class="help-block"></span>
-                                </div>
-                                <div class="form-group" id="first_name_div">
-                                    <label >First Name<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="first_name" id="first_name" value="<?php echo $data[1]; ?>" required="">
-                                    <span id="first_name_check" class="help-block"></span>
-                                </div>
-                                <div class="form-group" id="last_name_div">
-                                    <label >Last Name<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="last_name" id="last_name" value="<?php echo $data[2]; ?>" required="">
-                                    <span id="last_name_check" class="help-block"></span>
-                                </div>
-                                <div class="form-group" id="email_div">
-                                    <label >Email Address<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="email" id="email" value="<?php echo $data[3]; ?>" required="" onclick="input_remove_error_notification('email');">
-                                    <span id="email_check" class="help-block"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="box-body">
-                                <div class="form-group" id="username_div">
-                                    <label >Username<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="username" id="username" value="<?php echo $data[4]; ?>" required="" onclick="input_remove_error_notification('username');">
-                                    <span id="username_check" class="help-block"></span>
-                                </div>
-                                <div class="form-check" id="password_reset_div">
-                                  <input class="form-check-input" type="radio" name="password_reset" id="password_reset">
-                                  <label class="form-check-label" for="flexRadioDefault2">
-                                    Do you want change password?
-                                </label>
-                                </div>
-                                <div class="form-group" id="password_div" hidden="">
-                                    <label >Password<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="password" id="password" value="<?php echo decrypt($data[5]); ?>" required="">
-                                    <span id="password_check" class="help-block"></span>
-                                </div>
-                                <div class="form-group pull-right">
-                                    <input class="btn btn-success" type="submit" value="Update" id="btn_update">
-                                    <button type="button" class="btn btn-danger" onclick="javascript:window.location = '/home/index';">Cancel</button>
-                                </div>
+        <div class="row">
+        <div class="col-md-3">
+            <div class="box box-primary">
+            <div class="box-body box-profile">
+                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <p class="text-muted text-center">Software Engineer</p>
+            </div>
+            </div>
+            <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">About Me</h3>
+            </div>
+                <div class="box-body">
+                    <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+                    <p class="text-muted">Malibu, California</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-9">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#activity" data-toggle="tab">Setting</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="activity">
+                            <div class="tab-pane" id="settings">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-sm-2 control-label">First Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputName" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-sm-2 control-label">Last Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputName" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName" class="col-sm-2 control-label">User Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputName" placeholder="User Name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputExperience" class="col-sm-2 control-label"></label>
+                                        <div class="col-sm-10">
+                                            <input class="form-check-input" type="radio" name="password_reset" id="password_reset">
+                                            Do you want change password?
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputSkills" class="col-sm-2 control-label">Password</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="inputSkills" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-danger">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </section>
 </div>
-<?php include ('../../include/footer.php'); ?>
-<script src="../jquery/_profile_update.js" type="text/javascript"></script>
+<?php include '../../include/footer.php';?>

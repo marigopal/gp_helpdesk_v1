@@ -19,10 +19,7 @@ if ($result = $con->query($query)) {
             . "`password`, `service_used`, `authendication`, `remarks`, `status`, `created_by`, `done_on`) "
             . "VALUES ('$vendor','$account_no','$mob_no','$email_id','$username','$password','$service_used','$authendication','$remarks','3','$user_uid',now())";
     if ($result = $con->query($query_log)) {
-        echo "<script>
-                alert('Account Added Successfully');
-                window.location.href='/vendor_report/index_page/index';
-                </script>";
+        echo '1';
     }
 }
 ?>

@@ -10,7 +10,7 @@ include ("../../include/menu/menu.php");
         </ol>
     </section>
     <section class="content">
-        <form id="form" action="../db_page/_insert_vendor" method="post" enctype="multipart/form-data">
+        <form id="form" action="">
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-info">
@@ -46,7 +46,7 @@ include ("../../include/menu/menu.php");
                                 </div> 
                                 <div class="form-group " id="">
                                     <label>Email ID</label>
-                                    <input type="text" class="form-control"  name="email" id="email" value="" onclick="input_remove_error_notification('email');">
+                                    <input type="text" class="form-control"  name="email" id="email" value="" onkeyup="input_remove_error_notification('email');">
                                     <span id="email_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group " id="">
