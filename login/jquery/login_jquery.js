@@ -1,14 +1,29 @@
-$("#login_submit").click(function () {
-
-    var username = $("#login_username").val();
-    var password = $("#login_password").val();
-    if (username == '')
-    {
-        placeholder('login_username','Enter Username');
-        return false;
-    } else if (password == '')
-    {
-        placeholder('login_password','Enter Password');
-        return false;
-    }
-});
+$( "form" ).on( "submit", function(e) 
+{
+    var dataString = $(this).serialize();   
+    $.ajax({
+      type: "POST",
+      url: "../db_page/_check_login",
+      data: dataString,
+      success: function (result)
+                {
+                   if(result == 1)
+                   {    
+                        add_disabled('login_submit');
+                        toastr.success('Login Success..!');
+                        setTimeout(function () {
+                            window.location.href = "/home/index";
+                        }, 1000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Wrong Credential..!Please tray again..!');
+                        add_disabled('login_submit');  
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 1000);
+                    }
+                }
+    });
+    e.preventDefault();
+ });

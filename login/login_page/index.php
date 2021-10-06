@@ -6,17 +6,17 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-6">
                     <div class="form-block">
-                        <form action="check_user" method="POST">
+                        <form name="_login_form" action="">
                             <div class="text-center mb-5">
                                 <h3>Login</h3>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" name="login_username" id="login_username" placeholder="Username">
+                                <input type="text" class="form-control" name="login_username" id="login_username" placeholder="Username" required="">
                                 <span id="check_login_username" class="help-block"></span>
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Password">
+                                <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Password" required="">
                                 <span id="check_login_password" class="help-block"></span>
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>

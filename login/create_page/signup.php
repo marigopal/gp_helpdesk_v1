@@ -6,28 +6,28 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-6">
                     <div class="form-block">
-                        <form action="create_user" method="POST">
+                        <form name="_register_form" action="">
                             <div class="text-center mb-5">
                                 <h3>Create Account</h3>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname">
+                                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Firstname" required="">
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname">
+                                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required="">
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" name="email_id" id="email_id" placeholder="Email Address">
+                                <input type="text" class="form-control" name="email_id" id="email_id" placeholder="Email Address" required="">
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>
                             <div class="form-group has-feedback">
-                                <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required="">
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div>     
                             <div class="form-group has-feedback">
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="">
                                 <span class="glyphicon fa  fa-user form-control-feedback"></span>
                             </div> 
                             <div class="d-sm-flex mb-5 align-items-center">
