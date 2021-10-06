@@ -44,17 +44,17 @@ $data = mysqli_fetch_array($result);
                                     <span id="vendor_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group " id="account_div">
-                                    <label>Account Number<span class="required text-red">*</span></label>
+                                    <label>Account Number</label>
                                     <input type="text" class="form-control"  name="account_no" id="account_no" value="<?php echo $data[4]; ?>" onclick="input_remove_error_notification('account_no')">
                                     <span id="account_no_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group " id="">
-                                    <label>Mobile Number<span class="required text-red">*</span></label>
+                                    <label>Mobile Number</label>
                                     <input type="text" class="form-control"  name="mob_no" id="mob_no" value="<?php echo $data[5]; ?>">
                                     <span id="mobile_check" class="help-block"></span>
                                 </div> 
                                 <div class="form-group " id="">
-                                    <label>Email ID<span class="required text-red">*</span></label>
+                                    <label>Email ID</label>
                                     <input type="text" class="form-control"  name="email_id" id="email_id" value="<?php echo $data[6]; ?>">
                                     <span id="email_check" class="help-block"></span>
                                 </div>
@@ -65,7 +65,7 @@ $data = mysqli_fetch_array($result);
                                 </div>
                                 <div class="form-group " id="">
                                     <label>Password<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="password" id="password" value="<?php echo $data[8]; ?>">
+                                    <input type="text" class="form-control"  name="password" id="password" value="<?php echo decrypt($data[8]); ?>">
                                     <span id="password_check" class="help-block"></span>
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
                     <ul class="dropdown-menu">
                         <li><a  data-toggle="modal" data-target="#show_password_model_box" 
                                 onclick="
-                                        $('#pass').val('<?php echo $row[8]; ?>')">
+                                        $('#pass').val('<?php echo decrypt($row[8]); ?>')">
                                 Show Password</a></li>
                                 <li><a href="../edit_vendor/index?id=<?php echo encrypt($row[0]); ?> ">Edit</a></li>
                                 <li><a href="../db_page/_delete_vendor_update?id=<?php echo encrypt($row[0]); ?> ">Delete</a></li>
