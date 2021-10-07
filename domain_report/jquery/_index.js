@@ -63,3 +63,43 @@ $("#auto_renewal").change(function ()
         return false;
     }
 });
+$("#delete_row_subdomain").click(function ()
+{
+    var delete_id_domain = $('#delete_id_domain').val();
+    var domain = $('#domain').val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "../db_page/_delete_primary_domain",
+                data: 'id=' + delete_id_domain+ '&domain=' + domain,
+                datatype: "html",
+                success: function (result)
+                {
+                   if(result == 2)
+                   {    
+                        $('#delete_model_box_domain').modal('hide');
+                        toastr.error('Your selected domain contains sub domain records..!');
+                        setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index";
+                        }, 3000);
+                    }
+                   else if(result == 1)
+                   {    
+                        $('#delete_model_box_domain').modal('hide');
+                        toastr.error('Primary domain deleted successfully..!');
+                        setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index";
+                        }, 2000);
+                    }
+                    else
+                    {
+                     toastr.error('Something went wrong..!Please tray again..!');
+                        $('#delete_model_box_domain').modal('hide'); 
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);   
+                    }
+                }
+            });
+
+});

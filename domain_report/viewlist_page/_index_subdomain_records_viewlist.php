@@ -19,15 +19,21 @@ if ($result->num_rows > 0) {
                         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li> <a href="../edit_domain/edit_subdomain_records?id=<?php echo encrypt($row[0]); ?>">Edit</a></li>
-                        <li><a href="index_delete_subdomain?id=<?php echo encrypt($row[0]); ?>&domain=<?php echo encrypt($row[5]); ?>&subdomain=<?php echo encrypt($row[6]); ?>">Delete</a></li>
+                        <li><a  data-toggle="modal" data-target="#delete_model_box_domain" 
+                                onclick="
+                                        $('#delete_id_domain').val('<?php echo $row[0]; ?>');
+                                         $('#domain').val('<?php echo $row[4]; ?>');
+                                        $('#sub_domain').val('<?php echo $row[5]; ?>');
+                                            ">
+                                       
+                                Delete</a></li>
+<!--                        <li><a href="index_delete_subdomain?id=<?php echo encrypt($row[0]); ?>&domain=<?php echo encrypt($row[5]); ?>&subdomain=<?php echo encrypt($row[6]); ?>">Delete</a></li>-->
                     </ul>
                 </div> 
             </td>
         </tr>
         <?php
     }
-} else {
-    echo '<span style="color:red;text-align:center;">There is no records available..!</span>';
 }
 mysqli_close($con);
 ?>

@@ -10,20 +10,22 @@ $( "form" ).on( "submit", function(e) {
       data: dataString,
       success: function (result)
                 {
-                   if (result == 1)
-                   {
-                      success_alert('alert_notification','Domain Added Successfully..!');
-                      setTimeout(function () {
-                           window.location.href = "/domain_report/index_page/index";
-                       }, 3000);
-                   }
-                   else
-                   {
-                       danger_alert('alert_notification','Somthing Went problem..!');
-                       setTimeout(function () {
-                           window.location.reload();
-                       }, 3000);
-                   }
+                  if(result == 1)
+                   {    
+                        add_disabled('create_domain_button');
+                        toastr.success('Domain Added Successfully..!');
+                        setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index";
+                        }, 2000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Something Went Wrong..!Please tray again..!');
+                        add_disabled('create_domain_button');  
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    }
                 }
     });
  
@@ -51,6 +53,8 @@ $("#type").change(function ()
         add_hidden('sub_domain_name_div');
         remove_hidden('vendor_div');
         remove_hidden('account_div');
+        remove_hidden('exp_date_div');
+        remove_hidden('auto_renewal_div');
         add_required('vendor');
         add_required('account');
     }
@@ -91,7 +95,7 @@ $("#domain_name").change(function ()
                         return false;
                     } else if (result == 1)
                     {
-                        input_success_notification('domain_name','Domain name is Available..!')
+                        input_success_notification('domain_name','Domain name is valid..!')
                         remove_disabled ('create_domain_button');
                         $('#host').val(domain_name);
                         domain_name_validation('domain_name');

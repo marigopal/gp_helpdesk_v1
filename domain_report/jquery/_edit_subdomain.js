@@ -10,20 +10,23 @@ $( "form" ).on( "submit", function(e) {
       data: dataString,
       success: function (result)
                 {
-                   if (result == 1)
-                   {
-                      success_alert('alert_notification','Domain Updated Successfulkly..!');
-                      setTimeout(function () {
-                           window.location.href = "/domain_report/index_page/index_sub_records";
-                       }, 3000);
-                   }
-                   else
-                   {
-                       danger_alert('alert_notification','Somthing Went problem..!');
-                       setTimeout(function () {
-                           window.location.reload();
-                       }, 3000);
-                   }
+                  
+                   if(result == 1)
+                   {    
+                        add_disabled('subdomain_update_button');
+                        toastr.success('Sub Domain Updated Successfully..!');
+                        setTimeout(function () {
+                            window.location.href = "/domain_report/index_page/index_sub_records";
+                        }, 2000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Something Went Wrong..!Please tray again..!');
+                        add_disabled('subdomain_update_button');  
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    }
                 }
     });
  
@@ -60,4 +63,35 @@ $( "form" ).on( "submit", function(e) {
 //                    }
                 }
             })
+});
+$("#delete_row").click(function ()
+{
+    var delete_id = $('#delete_id').val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "../db_page/_delete_vendor_update",
+                data: 'id=' + delete_id,
+                datatype: "html",
+                success: function (result)
+                {
+                    if(result == 1)
+                   {    
+                        $('#delete_model_box').modal('hide');
+                        toastr.error('Vendor Account Deleted..!');
+                        setTimeout(function () {
+                            window.location.href = "/vendor_report/index_page/index";
+                        }, 2000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Something went wrong..!Please tray again..!');
+                        $('#delete_model_box').modal('hide'); 
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    }
+                }
+            });
+
 });

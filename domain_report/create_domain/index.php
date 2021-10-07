@@ -1,7 +1,6 @@
 <?php
 include ("../../include/menu/menu.php");
 ?>
-
 <div class="content-wrapper">
     <div class="alert alert-success" hidden="" id="alert_notification">
     <strong>Success!</strong> This alert box could indicate a successful or positive action.
@@ -101,7 +100,7 @@ include ("../../include/menu/menu.php");
                         <div class="col-md-6">
 
                             <div class="box-body">
-                                <div class="form-group " id="exp_date_div">
+                                <div class="form-group " id="exp_date_div" hidden="">
                                     <label>Expiration Date [YYYY-MM-DD]<span class="required text-red">*</span></label>
                                     <div class="input-group date" data-provide="datepicker">
                                         <input type="text" class="form-control" id="exp_date" name="exp_date" value="" required="">
@@ -110,7 +109,7 @@ include ("../../include/menu/menu.php");
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group " id="auto_renewal_div">
+                                <div class="form-group " id="auto_renewal_div" hidden="">
                                     <label>Auto Renewal<span class="required text-red">*</span></label>
                                     <select class="form-control" id="auto_renewal_add" name="auto_renewal_add" required="">
                                         <option value="">--Please Select --</option>
@@ -119,8 +118,8 @@ include ("../../include/menu/menu.php");
                                     </select>
                                     <span id="auto_renewal_add_check" class="help-block"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label >Remarks<span class="required text-red">*</span></label>
+                                <div class="form-group" id=remarks_div_">
+                                    <label >Remarks</label>
                                     <textarea class="form-control" rows="5" id="remarks" name="remarks" maxlength="150"></textarea>
                                     <span id="remarks_check" class="help-block"></span>
                                 </div>

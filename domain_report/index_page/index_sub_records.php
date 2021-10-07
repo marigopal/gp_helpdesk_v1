@@ -16,7 +16,7 @@ include ("../../include/menu/menu.php");
             <div class="col-xs-12">
                 <div class="box ">
                     <div class="box-header bg-green-active">
-                        <a href="create_domain"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" title="New"></a>
+                        <a href="/domain_report/create_domain/index"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" title="New"></a>
                         <a    onclick="exportexcel('sub_domain_records_table', 'sub_domain_records')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
                     </div>
                     <div class="box-body table-responsive no-padding">

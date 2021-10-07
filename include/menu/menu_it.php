@@ -27,7 +27,7 @@
                 <ul class="treeview-menu">
                     <li><a href="/domain_report/index"><i class="fa fa-circle-o"></i>Primary Domain</a></li>
                     <li><a href="/domain_report/index_page/index_sub_records"><i class="fa fa-circle-o"></i>Sub Records</a></li>
-                    <li><a href="/domain_report/logs_page/index"><i class="fa fa-circle-o"></i>Logs</a></li>
+                    <li><a href="/domain_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
 <!--            <li class="treeview">
