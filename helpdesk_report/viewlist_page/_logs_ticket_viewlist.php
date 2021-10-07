@@ -11,13 +11,13 @@ if (!empty($_POST['filter'])) {
     }
 } else {
     if ($_SESSION['accessid'] == '5') {
-        $and = "and tbl_helpdesk.status_id != '4' and tbl_helpdesk.status_id != '3'";
+        $and = "";
     } else {
-        $and = "and tbl_helpdesk.created_by = '$user_uid' and tbl_helpdesk.status_id != '4'";
+        $and = "and tbl_helpdesk.created_by = '$user_uid'";
     }
 }
 $sno = 0;
-$sql = "SELECT tbl_helpdesk_log.id,tbl_helpdesk_log.helpdesk_id,tbl_helpdesk_log.status_id,tbl_helpdesk_status.id,tbl_helpdesk_status.statusname,tbl_helpdesk_log.done_by,tbl_helpdesk_log.done_on,tbl_helpdesk.id,tbl_helpdesk.ticket_id from tbl_helpdesk_log INNER JOIN tbl_helpdesk_status on tbl_helpdesk_status.id = tbl_helpdesk_log.status_id INNER JOIN tbl_helpdesk on tbl_helpdesk.id = tbl_helpdesk_log.helpdesk_id ORDER BY tbl_helpdesk_log.helpdesk_id ASC";
+$sql = "SELECT tbl_helpdesk_log.id,tbl_helpdesk_log.helpdesk_id,tbl_helpdesk_log.status_id,tbl_helpdesk_status.id,tbl_helpdesk_status.statusname,tbl_helpdesk_log.done_by,tbl_helpdesk_log.done_on,tbl_helpdesk.id,tbl_helpdesk.ticket_id from tbl_helpdesk_log INNER JOIN tbl_helpdesk_status on tbl_helpdesk_status.id = tbl_helpdesk_log.status_id INNER JOIN tbl_helpdesk on tbl_helpdesk.id = tbl_helpdesk_log.helpdesk_id $and ORDER BY tbl_helpdesk_log.helpdesk_id ASC";
 $result = $con->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_array(MYSQLI_BOTH)) {
