@@ -6,6 +6,17 @@
 <script src="../../template_files/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../../template_files/bower_components/fastclick/lib/fastclick.js"></script>
 <script src="../../template_files/dist/js/adminlte.min.js"></script>
+<script src="../../template_files/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="../../template_files/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../../template_files/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- SlimScroll -->
+<script src="../../template_files/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- ChartJS -->
+<script src="../../template_files/bower_components/chart.js/Chart.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../template_files/dist/js/pages/dashboard.js"></script>
+<script src="../../template_files/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../../template_files/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../../template_files/dist/js/demo.js"></script>
 <script src="../../include/menu_close.js" type="text/javascript"></script>
 <script src="../../template_files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>

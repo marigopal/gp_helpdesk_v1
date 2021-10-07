@@ -27,6 +27,9 @@ if ($result=mysqli_query($con,$sql))
         <link rel="stylesheet" href="../../template_files/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="../../template_files/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../../template_files/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../../template_files/bower_components/bootstrap-daterangepicker/daterangepicker.css">
         <style>
         .blink_me 
         {
