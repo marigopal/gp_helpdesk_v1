@@ -33,8 +33,22 @@ function ticket_update(id,reason,button,modelbox_name,created_on)
                     datatype: "html",
                     success: function (result)
                     {
+                        
                         hide(modelbox_name);
-                        window.location.href = "/helpdesk_report/index";
+                        if(result == 1)
+                    {    
+                            toastr.success('Ticket Status Updated successfully..!');
+                            setTimeout(function () {
+                             window.location.href = "/helpdesk_report/index_page/index";
+                         }, 2000);
+                     }
+                    else 
+                    {    
+                         toastr.error('Wrong Credential..!Please tray again..!');
+                       setTimeout(function () {
+                             window.location.reload();
+                         }, 2000);
+                     }
                     }
                 });
     }

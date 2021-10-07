@@ -16,15 +16,9 @@ $sql = "UPDATE `tbl_account` SET `vendor`='$vendor',`accountno`='$account_no',`m
 //echo $sql;
 //exit();
 if (mysqli_query($con, $sql)) {
-    echo "<script>
-                alert('Account Updated Successfully');
-                window.location.href='/vendor_report/index_page/index';
-                </script>";
+    echo "1";
 } else {
-    echo "<script>
-                alert('Something went wrong..! Contact your Developer..!');
-                window.location.href='/vendor_report/index_page/index;
-                </script>";
+    echo "0";
 }
 mysqli_close($con);
 ?>

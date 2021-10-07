@@ -7,13 +7,12 @@ $( "form" ).on( "submit", function(e)
       data: dataString,
       success: function (result)
                 {
-                    alert(result);
-                   if(result == 1)
+                    if(result == 1)
                    {    
                         add_disabled('create_account_button');
                         toastr.success('Vendor Account Added..!');
                         setTimeout(function () {
-                            window.location.href = "/home/index";
+                            window.location.href = "/vendor_report/index_page/index";
                         }, 2000);
                     }
                    else 
@@ -91,6 +90,6 @@ $("#username").change(function ()
 });
 $("#email").change(function ()
 {
-email_validation('email');
+email_validation('email','Please enter valid eamil address..');
 return false;
 });

@@ -25,7 +25,11 @@ if ($result->num_rows > 0) {
                                         $('#pass').val('<?php echo decrypt($row[8]); ?>')">
                                 Show Password</a></li>
                                 <li><a href="../edit_vendor/index?id=<?php echo encrypt($row[0]); ?> ">Edit</a></li>
-                                <li><a href="../db_page/_delete_vendor_update?id=<?php echo encrypt($row[0]); ?> ">Delete</a></li>
+                                <li><a  data-toggle="modal" data-target="#delete_model_box" 
+                                onclick="
+                                        $('#delete_id').val('<?php echo $row[0]; ?>')">
+                                Delete</a></li>
+                                <!-- <li><a href="../db_page/_delete_vendor_update?id=<?php echo encrypt($row[0]); ?> ">Delete</a></li> -->
                     </ul>
                 </div> 
             </td>

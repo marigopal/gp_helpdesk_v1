@@ -13,20 +13,27 @@ include ("../../include/menu/menu.php");
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
-                <?php
-                $logs_button = "SELECT tbl_account_log.status,tbl_accountstatus.id,tbl_accountstatus.statusname from tbl_account_log INNER JOIN tbl_accountstatus on tbl_accountstatus.id = tbl_account_log.status GROUP by tbl_account_log.status";
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <?php
+                        $logs_button = "SELECT tbl_account_log.status,tbl_accountstatus.id,tbl_accountstatus.statusname from tbl_account_log INNER JOIN tbl_accountstatus on tbl_accountstatus.id = tbl_account_log.status GROUP by tbl_account_log.status";
                 if ($logs_button_result = $con->query($logs_button)) {
                     while ($logs_button_row = $logs_button_result->fetch_assoc()) {
                         $field1 = encrypt($logs_button_row['id']);
                         ?>  
-                        <a class="btn btn-warning" href="/vendor_report/logs_page/index?filter=<?php echo $field1; ?>" ><?php echo $logs_button_row['statusname']; ?></a>
-                        <?php
+                        <li><a href="/vendor_report/logs_page/index?filter=<?php echo $field1; ?>"><?php echo $logs_button_row['statusname']; ?></a></li>
+                       <?php
                     }
                 }
                 ?>
+                    </ul>
+                </div>
                 <div class="box ">
                     <div class="box-header bg-green-active">
-                        <a onclick="exportexcel('logs__vendor_account_list', 'vendor_account_list')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
+                        <a onclick="exportexcel('logs__vendor_account_list', 'vendor_account_list_logs')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
                     </div>
                     <div class="box-body table-responsive no-padding">
                         <form name="frmUser" method="post" action="">

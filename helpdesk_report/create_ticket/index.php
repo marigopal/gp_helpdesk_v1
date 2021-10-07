@@ -10,7 +10,7 @@ include ("../../include/menu/menu.php");
         </ol>
     </section>
     <section class="content">
-        <form id="form" action="../db_page/_insert_ticket.php" method="post" enctype="multipart/form-data">
+        <form id="form" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-info">
@@ -66,12 +66,12 @@ include ("../../include/menu/menu.php");
                                     <textarea class="form-control" rows="5" id="description" name="description" maxlength="150" required=""></textarea>
                                     <span id="description_check" class="help-block"></span>
                                 </div>
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <label for="exampleInputFile">Screen Shot</label>
                                     <input id="image" type="file" accept="image/*" name="image" />
-                                </div>
+                                </div>-->
                                 <div class="form-group pull-right">
-                                    <input class="btn btn-success" type="submit" value="Create" id="btn_update">
+                                    <input class="btn btn-success" type="submit" value="Create" id="create_ticket_button">
                                     <button type="button" class="btn btn-danger" onclick="javascript:window.location = '/helpdesk_report/index';">Cancel</button>
                                 </div>
                             </div>
@@ -83,3 +83,4 @@ include ("../../include/menu/menu.php");
     </section>
 </div>
 <?php include ('../../include/footer.php'); ?>
+<script src="../jquery/_create_ticket.js" type="text/javascript"></script>

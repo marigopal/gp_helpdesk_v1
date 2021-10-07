@@ -75,7 +75,7 @@ if ($result->num_rows > 0)
                                             $('#delete_ticket_id').val('<?= $row[0]; ?>');
                                     ">Delete</a></li>
                             <?php } ?>
-                            <?php if ($_SESSION['accessid'] == '5') { ?>
+                            <?php if ($_SESSION['accessid'] == '5' && $row[27] != '4') { ?>
                             <li><a href="../edit_ticket/index?id=<?php echo encrypt($row[0]); ?>">Edit</a></li>
                             <li><a  data-toggle="modal" data-target="#assign_ticket_model_box"
                                     onclick="

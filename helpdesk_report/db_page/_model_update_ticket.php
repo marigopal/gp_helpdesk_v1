@@ -40,8 +40,8 @@ if($action == 'assign')
 //echo $sql;
 //exit();
 if ((mysqli_query($con, $sql) && (mysqli_query($con, $sql_log)))) {
-    echo "Ticket Updated Successfully";
+    echo "1";
 } else {
-    echo "Something went wrong..! Contact your Developer..!";
+    echo "0";
 }
 mysqli_close($con);?>

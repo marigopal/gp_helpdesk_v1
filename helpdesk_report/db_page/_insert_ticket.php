@@ -52,13 +52,9 @@ function insert() {
             . "`created_by`, `created_on`, `status_id`, `screenshot_name`) VALUES ('$ticket_id','$category','$priority','$subject','$description',"
             . "'$user','$current_date_time','1','$newfilename')";
     if ($result = $con->query($query)) {
-        echo "<script>
-                alert('Ticket Added Successfully');
-                window.location.href=' /helpdesk_report/index';
-                </script>";
+        echo "1";
     } else {
-        echo '<script>alert("Something went wrong")</script>';
-        header("Location: /home/index");
+        echo '0';
     }
 }
 ?>

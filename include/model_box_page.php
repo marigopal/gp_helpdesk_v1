@@ -400,3 +400,26 @@
         </div>
     </div>
 </div>
+<!-- Delete model box -->
+<div class="modal modal-danger fade" id="delete_model_box">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Are you sure..! You want to delete..?</h4>
+              </div>
+              <div class="form-group col-md-6" hidden="">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="delete_id" id="delete_id" placeholder="" readonly="">
+                            <span id="delete_id_check" class="help-block"></span>
+                        </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="delete_row" name="delete_row">Yes</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>

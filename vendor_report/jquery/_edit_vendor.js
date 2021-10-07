@@ -1,3 +1,33 @@
+$( "form" ).on( "submit", function(e) 
+{
+    var dataString = $(this).serialize();   
+    $.ajax({
+      type: "POST",
+      url: "../db_page/_edit_vendor_update",
+      data: dataString,
+      success: function (result)
+                {
+                    if(result == 1)
+                   {    
+                        add_disabled('update_button');
+                        toastr.success('Vendor Account Updated..!');
+                        setTimeout(function () {
+                            window.location.href = "/vendor_report/index_page/index";
+                        }, 2000);
+                    }
+                   else 
+                   {    
+                        toastr.error('Something went wrong..!Please tray again..!');
+                        add_disabled('update_button');  
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);
+                    }
+                }
+    });
+    e.preventDefault();
+ });
+
 $("#account_no").change(function ()
 {
     var account_no = $("#account_no").val();
@@ -52,4 +82,9 @@ $("#username").change(function ()
                     }
                 }
             });
+});
+$("#email_id").change(function ()
+{
+email_validation('email_id','Please enter valid eamil address..');
+return false;
 });

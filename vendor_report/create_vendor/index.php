@@ -80,7 +80,7 @@ include ("../../include/menu/menu.php");
                                 </div>
                                 <div class="form-group pull-right">
                                     <input class="btn btn-success" type="submit" value="Create" id="create_account_button" name="create_account_button">
-                                    <button type="button" class="btn btn-danger" onclick="javascript:window.location = '/account/index';">Cancel</button>
+                                    <button type="button" class="btn btn-danger" onclick="javascript:window.location = '/vendor_report/index_page/index';">Cancel</button>
                                 </div>
                             </div>
                         </div>

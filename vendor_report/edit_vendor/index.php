@@ -14,7 +14,7 @@ $data = mysqli_fetch_array($result);
         </ol>
     </section>
     <section class="content">
-        <form id="form" action="../db_page/_edit_vendor_update" method="post" enctype="multipart/form-data">
+        <form id="form">
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-info">
@@ -55,8 +55,8 @@ $data = mysqli_fetch_array($result);
                                 </div> 
                                 <div class="form-group " id="">
                                     <label>Email ID</label>
-                                    <input type="text" class="form-control"  name="email_id" id="email_id" value="<?php echo $data[6]; ?>">
-                                    <span id="email_check" class="help-block"></span>
+                                    <input type="text" class="form-control"  name="email_id" id="email_id" value="<?php echo $data[6]; ?>" onkeyup="input_remove_error_notification('email_id');">
+                                    <span id="email_id_check" class="help-block"></span>
                                 </div>
                                 <div class="form-group " id="">
                                     <label>Username<span class="required text-red">*</span></label>

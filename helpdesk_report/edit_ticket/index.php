@@ -14,7 +14,7 @@ $data = mysqli_fetch_array($result);
         </ol>
     </section>
     <section class="content">
-        <form id="form" action="../db_page/_update_ticket.php" method="post" enctype="multipart/form-data">
+        <form id="form" action="" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-12">
                     <div class="box box-info">
@@ -89,3 +89,4 @@ $data = mysqli_fetch_array($result);
     </section>
 </div>
 <?php include ('../../include/footer.php'); ?>
+<script src="../jquery/_edit_ticket.js" type="text/javascript"></script>
