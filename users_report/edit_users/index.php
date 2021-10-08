@@ -78,7 +78,7 @@ $data = mysqli_fetch_array($result);
                                     <div class="form-group">
                                         <label for="inputEmail" class="col-sm-2 control-label">Address</label>
                                         <div class="col-sm-10">
-                                            <textarea class="form-control" rows="5" id="address" name="address" maxlength="150" required="" placeholder="Address"><?php echo $data[5];  ?></textarea>
+                                            <textarea class="form-control" rows="5" id="address" name="address" maxlength="150" placeholder="Address"><?php echo $data[5];  ?></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">

@@ -373,7 +373,7 @@
                         <div class="form-group col-md-6 ">
                             <label for="exampleInputEmail1">Access List</label>
                             <select class="form-control" id="users_change_access_name" name="users_change_access_name" required="" onchange="input_remove_error_notification('users_change_access_name');">
-                                <option value="">--Please Select--</option>
+                                <option value=''>--Please Select--</option>
                                 
                                 <?php
                                 $query2 = "SELECT tbl_users_access.users_accessid,tbl_users_access.access_name from tbl_users_access";
@@ -394,7 +394,40 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="users_default_access_model_box_button" onclick="user_access_change('users_change_access_uid','users_change_access_name');">Save changes</button>
+                <button type="button" class="btn btn-primary" id="users_default_access_model_box_button">Save changes</button>
+                <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Users Propery change model box's-->
+<div class="modal modal-danger fade" id="users_property_change_model_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                 <h4 class="modal-title">Are you sure..! You want to change user properties..?</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 " hidden="">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="user_property_id" id="user_property_id" placeholder="" readonly="">
+                            <span id="user_property_id_check" class="help-block"></span>
+                        </div>
+                        <div class="form-group col-md-6 " hidden="">
+                            <label for="exampleInputEmail1">Action</label>
+                            <input type="text" class="form-control" name="user_property_action" id="user_property_action" placeholder="" readonly="">
+                            <span id="user_property_action_check" class="help-block"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="users_property_button" name="users_property_button">Yes</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
                 <span id="success_done" class="help-block"></span>
             </div>
         </div>

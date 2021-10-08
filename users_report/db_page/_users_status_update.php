@@ -1,7 +1,7 @@
 <?php
 include '../../include/lib_page.php';
-$id = decrypt($_GET['id']);
-$action = decrypt($_GET['action']);
+$id = $_POST['id'];
+$action = $_POST['user_property_action'];
 $temp_password = encrypt('123456');
 if($action == 'Delete')
 {
@@ -20,15 +20,9 @@ if($action == 'Enable')
 $sql = "UPDATE `tbl_users` SET `status_id`='1' WHERE `id` = '$id'";
 }
 if (mysqli_query($con, $sql)) {
-    echo "<script>
-                alert('Users Details Updated Successfully');
-                window.location.href='/users_report/index_page/';
-                </script>";
+    echo "1";
 } else {
-    echo "<script>
-                alert('Something went wrong..! Contact your Developer..!');
-                window.location.href='/users_report/index_page/';
-                </script>";
+    echo "0";
 }
 mysqli_close($con);
 ?>

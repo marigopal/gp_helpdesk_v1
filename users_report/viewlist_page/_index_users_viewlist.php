@@ -44,16 +44,36 @@ if ($result->num_rows > 0)
                                             // $('#users_change_access_name').val('<?= $row[8] ?>');
                                         ">Change Access</a>
                                 </li>
-                                <li><a href="../db_page/_users_status_update?id=<?php echo encrypt($row[0]); ?>&action=<?php echo encrypt('Reset_password'); ?>">Reset Password</a></li>
+                                <li><a  data-toggle="modal" data-target="#users_property_change_model_box"
+                                        onclick="
+                                            $('#user_property_id').val('<?= $row[0]; ?>');
+                                             $('#user_property_action').val('Reset_password');
+                                        ">Reset Password</a>
+                                </li>
                                 <?php if($filter != '3') {?>
-                                <li><a href="../db_page/_users_status_update?id=<?php echo encrypt($row[0]); ?>&action=<?php echo encrypt('Disable'); ?>">Disable</a></li>
-                                <?php }?>
-                                <?php if($filter == '3') {?>
-                                <li><a href="../db_page/_users_status_update?id=<?php echo encrypt($row[0]); ?>&action=<?php echo encrypt('Enable'); ?>">Enable</a></li>
-                                <?php }?>
-                                <li><a href="../db_page/_users_status_update?id=<?php echo encrypt($row[0]); ?>&action=<?php echo encrypt('Delete'); ?>">Delete</a></li>
-                                 <?php }
-                                 ?>
+                                <li><a  data-toggle="modal" data-target="#users_property_change_model_box"
+                                        onclick="
+                                            $('#user_property_id').val('<?= $row[0]; ?>');
+                                             $('#user_property_action').val('Disable');
+                                        ">Disable</a>
+                                </li>
+                                <?php }
+                                if($filter == '3') {?>
+                                <li><a  data-toggle="modal" data-target="#users_property_change_model_box"
+                                        onclick="
+                                            $('#user_property_id').val('<?= $row[0]; ?>');
+                                             $('#user_property_action').val('Enable');
+                                        ">Enable</a>
+                                </li>
+                                 <?php }?>
+                                <li><a  data-toggle="modal" data-target="#users_property_change_model_box"
+                                        onclick="
+                                            $('#user_property_id').val('<?= $row[0]; ?>');
+                                             $('#user_property_action').val('Delete');
+                                        ">Delete</a>
+                                </li>
+                                <?php
+                                }?>
                             </ul>
                       
                         </div>
