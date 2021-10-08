@@ -10,3 +10,34 @@ $.ajax({
         $('#_index_vendor_profile_report').html(data);
     }
 });
+$("#delete_row").click(function ()
+{
+    var delete_id = $('#delete_id').val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "../db_page/_delete_vendor_profile",
+                data: 'id=' + delete_id,
+                datatype: "html",
+                success: function (result)
+                {
+                   if(result == 1)
+                   {    
+                        $('#delete_model_box').modal('hide');
+                        toastr.error('Vendor Profile deleted successfully..!');
+                        setTimeout(function () {
+                            window.location.href = "/vendor_report/index_page/index_vendor_profile";
+                        }, 2000);
+                    }
+                    else
+                    {
+                     toastr.error('Something went wrong..!Please tray again..!');
+                        $('#delete_model_box').modal('hide'); 
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2000);   
+                    }
+                }
+            });
+
+});

@@ -14,7 +14,7 @@ include ("../../include/menu/menu.php");
             <div class="col-xs-12">
                 <div class="box ">
                     <div class="box-header bg-green-active">
-                        <a href="/vendor_report/create_vendor/index"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" data-toggle="modal" data-target="#new_users" title="New"></a>
+                        <a href="/vendor_report/create_vendor/create_vendor_profile"><img src="/img/icons8-add-row-52.png" alt="Smiley face" height="25" width="25" data-toggle="modal" data-target="#new_users" title="New"></a>
                         <a onclick="exportexcel('vendor_account_list', 'vendor_account_list')"><img src="/img/icons8-xls-export-52.png" alt="Smiley face" height="25" width="25" title="Export to Excel" id="btnExport"></a>
                     </div>
                     <div class="box-body table-responsive no-padding">
