@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
             <td><?php echo $row[7]; ?></td>
             <td><?php echo $row[10]; ?></td>
             <td>
-                <a href="/domain_report/index_page/index_sub_records?id=<?php echo $row[11]; ?>"><?php echo $row[11]; ?></a>
+                <a href="/domain_report/index_page/index_sub_records?id=<?php echo encrypt($row[11]); ?>"><?php echo $row[11]; ?></a>
             </td>
             <td><?php echo $row[12]; ?></td>
             <td><?php echo $row[15]; ?></td>

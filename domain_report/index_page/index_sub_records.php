@@ -7,7 +7,7 @@ include ("../../include/menu/menu.php");
         <ol class="breadcrumb">
             <li><a href="/home/index"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="/domain_report/index_page/index"><i class="fa fa-dashboard"></i> Domain Dashbaord</a></li>
-            <li class="active">Sub Domain Dashbaord</li>
+            <li class="active">Sub Domain Dashboard</li>
         </ol>
     </section>
     <?php include ('domain_widget_page.php'); ?>

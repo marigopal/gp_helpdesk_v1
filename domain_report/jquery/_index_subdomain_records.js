@@ -1,7 +1,11 @@
+var url_string = window.location.href;
+var url = new URL(url_string);
+var _filter = url.searchParams.get("id");
 $.ajax
         ({
             url: "../viewlist_page/_index_subdomain_records_viewlist",
             type: "POST",
+             data: {filter: _filter},
             cache: false,
             success: function (data)
             {
