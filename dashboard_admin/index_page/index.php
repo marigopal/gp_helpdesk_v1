@@ -70,7 +70,7 @@ include ("../../include/menu/menu.php");
                 <div class="box box-widget widget-user-2">
                     
                     <div class="widget-user-header bg-blue-gradient">
-                   Server Renewal Notification
+                   Domain Renewal Notification
                 </div>
                     <div class="box-body">
                         <div class="table-responsive">
