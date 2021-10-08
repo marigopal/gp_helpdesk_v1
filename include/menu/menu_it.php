@@ -30,19 +30,19 @@
                     <li><a href="/domain_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
-<!--            <li class="treeview">
+            <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-user-circle"></i> <span>Domain</span>
+                    <i class="fa fa-server"></i> <span>Server</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="/domain/index"><i class="fa fa-circle-o"></i>Primary Domain</a></li>
-                    <li><a href="/domain/index_subdomain"><i class="fa fa-circle-o"></i>Sub Domain</a></li>
-                    <li><a href="/domain/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
+                    <li><a href="/server_report/index_page/index"><i class="fa fa-circle-o"></i>Product List</a></li>
+                    <li><a href="/server_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
+<!--            
             
             <li class="treeview">
                 <a href="#">

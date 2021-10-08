@@ -489,3 +489,61 @@
           </div>
           <!-- /.modal-dialog -->
         </div>
+<!--Delete Server Model box-->
+<div class="modal modal-danger fade" id="delete_model_box_server">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Are you sure..! You want to delete..?</h4>
+              </div>
+                <div class="form-group col-md-6" hidden="">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="delete_id_server" id="delete_id_server" placeholder="" readonly="">
+                            <span id="delete_id_server_check" class="help-block"></span>
+                        </div>
+                
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="delete_row_server" name="delete_row_server">Yes</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+<!--Server Renewal Model Box-->
+<div class="modal fade" id="_server_renewed_model_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Renewed Domain</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="server_renewal_id" id="server_renewal_id" placeholder="" readonly="">
+                            <span id="renewal_id_check" class="help-block"></span>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Next Renewal Date [YYYY-MM-DD]</label>
+                            <input type="text" class="form-control" id="server_next_renewal" name="server_next_renewal" value="<?php echo date("Y-m-d") ?>" onclick="input_remove_error_notification('next_renewal');">
+
+                            <span id="server_next_renewal_check" class="help-block"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="renewed_model_box_server_save_button">Save changes</button>
+                <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
