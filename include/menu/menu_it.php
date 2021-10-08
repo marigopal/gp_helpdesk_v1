@@ -13,7 +13,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/vendor_report/index_page/index"><i class="fa fa-circle-o"></i>Vendor Accounts</a></li>
-<!--                    <li><a href="/vendor_report/index_page/index"><i class="fa fa-circle-o"></i>Vendor Profile list</a></li>-->
+                    <li><a href="/vendor_report/index_page/index_vendor_profile"><i class="fa fa-circle-o"></i>Vendor Profile list</a></li>
                     <li><a href="/vendor_report/logs_page/index"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
