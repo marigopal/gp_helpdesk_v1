@@ -7,6 +7,7 @@ include '../../include/lib_page.php';
                 while($row = $result->fetch_array(MYSQLI_BOTH)) {
 ?>	
 		<tr>
+                        <td><input type="checkbox" name="server_list[]" id="server_list" value="<?php echo $row[0];?>" /></td>
                         <td><?= ++$sno; ?></td>
                         <td hidden=""><?php echo $row[0];?></td>
 			<td><?php echo $row[3];?></td>

@@ -76,3 +76,94 @@ $("#renewed_model_box_server_save_button").click(function ()
                 }
             });
 });
+$('#bulk_renewal_button').click(function ()
+{
+    var bulk_delete_expired_date = $('#bulk_delete_expired_date').val();
+    if(bulk_delete_expired_date == '')
+    {
+        input_error_notification('bulk_delete_expired_date','Please select expiration date..!');
+        return false;
+    }
+    else
+    {
+        var id = [];
+        $(':checkbox:checked').each(function (i) 
+        {
+            id[i] = $(this).val();
+        });
+        if (id.length === 0) //tell you if the array is empty
+        {
+            input_error_notification('bulk_renewal_button','Please select atleast one chec box..!');
+            return false;
+        }
+        else
+        {   
+            $.ajax({
+                url: '../db_page/_bulk_server_renewal',
+                method: 'POST',
+                data: {id: id, bulk_delete_expired_date: bulk_delete_expired_date},
+                success: function (result)
+                {
+                    if (result != 0)
+                   {
+                       add_disabled('bulk_renewal_button');  
+                       toastr.success('Bulk Renewal Updated Successfully!');
+                       setTimeout(function () {
+                            window.location.href = "/server_report/index_page/index";
+                        }, 2000);
+                    }
+                   else
+                   {
+                        toastr.error('Somthing Went problem..!');
+                        add_disabled('bulk_renewal_button');  
+                        setTimeout(function () {
+                            window.location.href = "/server_report/index_page/index";
+                       }, 3000);
+                   }
+                        
+                }
+            });
+        }
+    }
+});
+$('#bulk_delete_button').click(function ()
+{
+        var id = [];
+        $(':checkbox:checked').each(function (i) 
+        {
+            id[i] = $(this).val();
+        });
+        if (id.length === 0) //tell you if the array is empty
+        {
+            input_error_notification('bulk_renewal_button','Please select atleast one chec box..!');
+            return false;
+        }
+        else
+        {
+            $.ajax({
+                url: '../db_page/_bulk_server_delete',
+                method: 'POST',
+                data: {id: id},
+                success: function (result)
+                {
+                    if (result != 0)
+                   {
+                       add_disabled('bulk_delete_button');  
+                       toastr.success('Bulk Deleted Successfully!');
+                       setTimeout(function () {
+                            window.location.href = "/server_report/index_page/index";
+                        }, 2000);
+                    }
+                   else
+                   {
+                        toastr.error('Somthing Went problem..!');
+                        add_disabled('bulk_delete_button');  
+                        setTimeout(function () {
+                            window.location.href = "/server_report/index_page/index";
+                       }, 3000);
+                   }
+                        
+                }
+            });
+        }
+});

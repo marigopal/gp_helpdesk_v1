@@ -130,3 +130,9 @@ function danger_alert(id,msg)
     $("#"+id).removeClass('alert-success').addClass('alert-danger').addClass('blink_me');
     
 }
+$('#selectAll').click(function (e)
+                    {
+                        var table = $(e.target).closest('table');
+                        $('td input:checkbox', table).prop('checked', this.checked);
+
+                    });
