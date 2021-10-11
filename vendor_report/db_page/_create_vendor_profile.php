@@ -6,8 +6,9 @@ $vendor = $_POST['vendor'];
 $contact_no = $_POST['contact_no'];
 $email = $_POST['email'];
 $address = $_POST['address'];
-$query = "INSERT INTO `tbl_vendor`(`name`, `contact_no`, `email`, `address`) "
-        . "VALUES ('$vendor','$contact_no','$email','$address')";
+$web_site = $_POST['web_site'];
+$query = "INSERT INTO `tbl_vendor`(`name`, `contact_no`, `email`, `address`, `web_link`) "
+        . "VALUES ('$vendor','$contact_no','$email','$address','$web_site')";
 if ($result = $con->query($query)) 
 {
     echo "1";

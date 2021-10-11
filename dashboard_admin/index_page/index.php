@@ -82,6 +82,7 @@ include ("../../include/menu/menu.php");
                                         <th>Account No</th>
                                         <th>Domain</th>
                                         <th>Expiration Date</th>
+                                        <th>Web Link</th>
                                     </tr>
                                 </thead>
                                 <tbody id="_domain_renewals">
@@ -108,6 +109,7 @@ include ("../../include/menu/menu.php");
                                         <th>Account No</th>
                                         <th>Server Name</th>
                                         <th>Expiration Date</th>
+                                        <th>Web Link</th>
                                     </tr>
                                 </thead>
                                 <tbody id="_server_renewals">

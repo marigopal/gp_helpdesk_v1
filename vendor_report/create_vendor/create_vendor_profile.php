@@ -37,6 +37,11 @@ include ("../../include/menu/menu.php");
                                     <textarea class="form-control" rows="5" id="address" name="address" maxlength="150" ></textarea>
                                     <span id="address_check" class="help-block"></span>
                                 </div>
+                                <div class="form-group " id="">
+                                    <label>Web Site</label>
+                                    <textarea class="form-control" rows="5" id="web_site" name="web_site" maxlength="150" ></textarea>
+                                    <span id="web_site_check" class="help-block"></span>
+                                </div>
                                 <div class="form-group pull-right">
                                     <input class="btn btn-success" type="submit" value="Create" id="vendor_profile_create" name="vendor_profile_create">
                                     <button type="button" class="btn btn-danger" onclick="javascript:window.location = '/vendor_report/index_page/index_vendor_profile';">Cancel</button>
