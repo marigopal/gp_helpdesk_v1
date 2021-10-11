@@ -1,7 +1,7 @@
 <?php
 include '../../include/lib_page.php';
         $sno = 0;
-	$sql = "SELECT tbl_server.id,tbl_server.vendor,tbl_vendor.id,tbl_vendor.name,tbl_server.account_no,tbl_account.id,tbl_account.username,tbl_server.server_type,tbl_server_type.id,tbl_server_type.server_type,tbl_server.server_name,tbl_server.server_ip,tbl_server.username,tbl_server.password,tbl_server.expiration_date,tbl_server.application,tbl_server.purpose,tbl_server.spec,tbl_server.remarks FROM tbl_server INNER JOIN tbl_vendor on tbl_vendor.id = tbl_server.vendor INNER JOIN tbl_account on tbl_account.id = tbl_server.account_no INNER JOIN tbl_server_type on tbl_server_type.id = tbl_server.server_type";
+	$sql = "SELECT tbl_server.id,tbl_server.vendor,tbl_vendor.id,tbl_vendor.name,tbl_server.account_no,tbl_account.id,tbl_account.username,tbl_server.server_type,tbl_server_type.id,tbl_server_type.server_type,tbl_server.server_name,tbl_server.server_ip,tbl_server.username,tbl_server.password,tbl_server.expiration_date,tbl_server.application,tbl_server.purpose,tbl_server.spec,tbl_server.remarks FROM tbl_server INNER JOIN tbl_vendor on tbl_vendor.id = tbl_server.vendor INNER JOIN tbl_account on tbl_account.id = tbl_server.account_no INNER JOIN tbl_server_type on tbl_server_type.id = tbl_server.server_type ORDER BY tbl_server.expiration_date ASC";
         $result = $con->query($sql);
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_array(MYSQLI_BOTH)) {
