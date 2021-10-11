@@ -80,17 +80,7 @@
                     <li><a href="/helpdesk_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-users"></i> <span>Users</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="/users_report/index_page/index"><i class="fa fa-circle-o"></i>Users Report</a></li>
-                </ul>
-            </li>
+           
             <li><a href="/include/logout"><i class="fa fa-frown-o"></i> <span>Logout</span></a></li>
         </ul>
     </section>

@@ -6,7 +6,7 @@ if ($_SESSION['accessid'] == 5)
 } 
 elseif ($_SESSION['accessid'] == 4) 
 {
-    header("Location: /dashboard_accounts/index");
+    header("Location: /dashboard_admin/index");
 } 
 elseif ($_SESSION['accessid'] == 3) 
 {

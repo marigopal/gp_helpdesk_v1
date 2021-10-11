@@ -2,11 +2,18 @@
     <strong>Copyright © 2021 GP Global Soft Tech Pvt Ltd
 </footer>
 <script src="../../template_files/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../template_files/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<script src="../../template_files/bower_components/raphael/raphael.min.js"></script>
+<script src="../../template_files/bower_components/morris.js/morris.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="../../template_files/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../../template_files/bower_components/fastclick/lib/fastclick.js"></script>
 <script src="../../template_files/dist/js/adminlte.min.js"></script>
 <script src="../../template_files/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<script src="../../template_files/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <script src="../../template_files/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
 <script src="../../template_files/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- SlimScroll -->
@@ -21,7 +28,9 @@
 <script src="../../include/menu_close.js" type="text/javascript"></script>
 <script src="../../template_files/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../../template_files/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../../template_files/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../template_files/bower_components/moment/min/moment.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="../../template_files/bower_components/bootstrap-clockpicker/dist/bootstrap-clockpicker.min.js"></script>
 <script src="../../template_files/sweetalert2/sweetalert2.min.js"></script>
