@@ -547,3 +547,49 @@
         </div>
     </div>
 </div>
+<!--SSL add domain model box-->
+<div class="modal fade" id="add_domain_ssl_model_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Domain in SSL</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="add_domain_ssl_id" id="add_domain_ssl_id" placeholder="" readonly="">
+                            <span id="add_domain_ssl_id_check" class="help-block"></span>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label >Domain Name<span class="required text-red">*</span></label>
+                                    <input type="text" class="form-control"  name="add_domain_name_ssl" id="add_domain_name_ssl"  onclick="input_remove_error_notification('domain_name');">
+                                    <span id="add_domain_name_ssl_check" class="help-block"></span>
+                            
+                        </div>
+                         
+                        <div class="form-group col-md-6 " id="ssl_expiration_date_div" hidden="">
+                            <label>Expiration Date [YYYY-MM-DD]<span class="required text-red">*</span></label>
+                                    <div class="input-group date" data-provide="datepicker">
+                                        <input type="text" class="form-control" id="add_domain_ssl_expiration_date" name="add_domain_ssl_expiration_date" value="" required="">
+                                        <div class="input-group-addon">
+                                            <span class="glyphicon glyphicon-th"></span>
+                                        </div>
+                                    </div>
+                            <span id="add_domain_ssl_expiration_date_check" class="help-block"></span>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="add_domain_ssl_save_button">Save changes</button>
+                <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@ $.ajax({
 		type: "POST",
 		cache: false,
 		success: function(data){
-			$('#_server_report').html(data); 
+			$('#_ssl_report').html(data); 
 		}
 });
 $("#delete_row_server").click(function ()
