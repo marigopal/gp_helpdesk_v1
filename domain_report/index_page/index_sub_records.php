@@ -23,7 +23,7 @@ include ("../../include/menu/menu.php");
                         <table class="table table-hover" style="padding-bottom: 50px;" id="sub_domain_records_table">
                             <thead>
                                 <tr>
-                                    <th>Sl No</th>
+                                    <th>#</th>
                                     <th hidden="">Unique ID</th>
                                     <th>Record</th>
                                     <th>Domain</th>

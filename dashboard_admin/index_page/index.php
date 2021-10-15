@@ -77,7 +77,7 @@ include ("../../include/menu/menu.php");
                             <table class="table no-margin">
                                 <thead>
                                     <tr>
-                                        <th>S No</th>
+                                        <th>#</th>
                                         <th>Vendor</th>
                                         <th>Account No</th>
                                         <th>Domain</th>
@@ -104,7 +104,7 @@ include ("../../include/menu/menu.php");
                             <table class="table no-margin">
                                 <thead>
                                     <tr>
-                                        <th>S No</th>
+                                        <th>#</th>
                                         <th>Vendor</th>
                                         <th>Account No</th>
                                         <th>Server Name</th>
@@ -120,12 +120,71 @@ include ("../../include/menu/menu.php");
                     </div>
                 </div>
             </div>
+            
+        </div>
+<div class="row">
+            <div class="col-md-6">
+                <div class="box box-widget widget-user-2">
+                    
+                    <div class="widget-user-header bg-red-gradient">
+                   SSL Renewal Notification
+                </div>
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table no-margin">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>SSL ID</th>
+                                        <th>Vendor</th>
+                                        <th>Account No</th>
+                                        <th>Domain</th>
+                                        <th>Expiration Date</th>
+                                        <th>Web Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="_ssl_renewal_report">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                 <div class="box box-widget widget-user-2">
+                    
+                    <div class="widget-user-header  bg-red-gradient">
+                   Monthly Renewal Notification
+                </div>
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table no-margin">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Vendor</th>
+                                        <th>Account No</th>
+                                        <th>Server Name</th>
+                                        <th>Expiration Date</th>
+                                        <th>Web Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="_monthly_renewal_report">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-widget widget-user-2">
                     
-                    <div class="widget-user-header bg-blue-gradient">
+                    <div class="widget-user-header bg-lime-active">
                     Ticket Inprogress
                 </div>
                     <div class="box-body">
@@ -133,7 +192,7 @@ include ("../../include/menu/menu.php");
                             <table class="table no-margin">
                                 <thead>
                                     <tr>
-                                    <th>Sl No</th>
+                                    <th>#</th>
                                     <th hidden="">Unique ID</th>
                                     <th>Ticket ID</th>
                                     <th>Created On</th>
@@ -156,6 +215,7 @@ include ("../../include/menu/menu.php");
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 </div>

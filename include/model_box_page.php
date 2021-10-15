@@ -564,23 +564,24 @@
                             <input type="text" class="form-control" name="add_domain_ssl_id" id="add_domain_ssl_id" placeholder="" readonly="">
                             <span id="add_domain_ssl_id_check" class="help-block"></span>
                         </div>
-                        <div class="form-group col-md-6 ">
-                            <label >Domain Name<span class="required text-red">*</span></label>
-                                    <input type="text" class="form-control"  name="add_domain_name_ssl" id="add_domain_name_ssl"  onclick="input_remove_error_notification('domain_name');">
-                                    <span id="add_domain_name_ssl_check" class="help-block"></span>
-                            
-                        </div>
-                         
-                        <div class="form-group col-md-6 " id="ssl_expiration_date_div" hidden="">
+                         <div class="form-group col-md-6 " id="ssl_expiration_date_div" hidden="">
                             <label>Expiration Date [YYYY-MM-DD]<span class="required text-red">*</span></label>
                                     <div class="input-group date" data-provide="datepicker">
-                                        <input type="text" class="form-control" id="add_domain_ssl_expiration_date" name="add_domain_ssl_expiration_date" value="" required="">
+                                        <input type="text" class="form-control" id="add_domain_ssl_expiration_date" name="add_domain_ssl_expiration_date" value="" required="" onkeyup="input_remove_error_notification('add_domain_ssl_expiration_date');">
                                         <div class="input-group-addon">
                                             <span class="glyphicon glyphicon-th"></span>
                                         </div>
                                     </div>
                             <span id="add_domain_ssl_expiration_date_check" class="help-block"></span>
                         </div>
+                        <div class="form-group col-md-6 ">
+                            <label >Domain Name<span class="required text-red">*</span></label>
+                                    <input type="text" class="form-control"  name="add_domain_name_ssl" id="add_domain_name_ssl"  onkeyup="input_remove_error_notification('add_domain_name_ssl');">
+                                    <span id="add_domain_name_ssl_check" class="help-block"></span>
+                            
+                        </div>
+                         
+                       
                       
                     </div>
                 </div>
@@ -588,6 +589,68 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" id="add_domain_ssl_save_button">Save changes</button>
+                <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Expired ssl product list--> 
+<div class="modal modal-danger fade" id="expired_ssl_product_modal_box">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Are you sure..! You want to change Expired status..? </h4>
+              </div>
+                <div class="form-group col-md-6" hidden="">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="ssl_product_list_uid" id="ssl_product_list_uid" placeholder="" readonly="">
+                            <span id="ssl_product_list_uid_check" class="help-block"></span>
+                        </div>
+                
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="expired_ssl_product_button" name="expired_ssl_product_button">Yes</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+<!--Change domain name in ssl-->
+<div class="modal fade" id="change_ssl_domain_name_model_box_server">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Change Domain in SSL</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="change_ssl_domain_name_id" id="change_ssl_domain_name_id" placeholder="" readonly="">
+                            <span id="change_ssl_domain_name_id_check" class="help-block"></span>
+                        </div>
+                         
+                        <div class="form-group col-md-6 ">
+                            <label >Domain Name<span class="required text-red">*</span></label>
+                                    <input type="text" class="form-control"  name="change_ssl_domain_name" id="change_ssl_domain_name"  onkeyup="input_remove_error_notification('add_domain_name_ssl');">
+                                    <span id="change_ssl_domain_name_check" class="help-block"></span>
+                            
+                        </div>
+                         
+                       
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="change_ssl_domain_name_save_button">Save changes</button>
                 <span id="success_done" class="help-block"></span>
             </div>
         </div>

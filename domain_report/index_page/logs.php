@@ -49,7 +49,7 @@ include ("../../include/menu/menu.php");
                                     }
                                     ?>
                                     <tr>
-                                        <th>Sl No</th>
+                                        <th>#</th>
                                         <th hidden="">Unique ID</th>
                                         <th>Vendor</th>
                                         <th>Account Number</th>

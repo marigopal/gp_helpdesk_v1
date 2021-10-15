@@ -4,11 +4,11 @@ include ("../../include/menu/menu.php");
 <div class="content-wrapper">
 
     <section class="content-header">
-        <h1>SSL Product List</h1>
+        <h1>SSL Domain List</h1>
         <ol class="breadcrumb">
             <li><a href="/home/index"><i class="fa fa-dashboard"></i> Home</a></li>
 
-            <li class="active">SSL Product List</li>
+            <li class="active">SSL Domain List</li>
         </ol>
     </section>
 
@@ -36,13 +36,12 @@ include ("../../include/menu/menu.php");
                                         <th>Vendor</th>
                                         <th>Account Number</th>
                                         <th>Product</th>
-                                        <th>Domain Used</th>
-                                        <th>Expiration Date</th>
+                                        <th>Domain Name</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tbody id="_ssl_report">
+                                <tbody id="_ssl_domain_report">
 
                                 </tbody>
                             </table>
@@ -71,4 +70,4 @@ include ("../../include/menu/menu.php");
     </section>
 </div>
 <?php include ('../../include/footer.php'); ?>
-<script src="../jquery/_index.js" type="text/javascript"></script>
+<script src="../jquery/_index_ssl_domain_list.js" type="text/javascript"></script>

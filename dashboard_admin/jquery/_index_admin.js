@@ -18,16 +18,21 @@ $.ajax
                 $('#_server_renewals').html(data);
             }
         });
-
-var url_string = window.location.href;
-var url = new URL(url_string);
-var _filter = url.searchParams.get("filter");
-$.ajax({
+        $.ajax
+        ({
+            url: "../viewlist_page/report_ssl_renewals",
+            type: "POST",
+            cache: false,
+            success: function (data)
+            {
+                $('#_ssl_renewal_report').html(data);
+            }
+        });
+        $.ajax({
     url: "../viewlist_page/_index_ticket_viewlist",
     type: "POST",
-    data: {filter: _filter},
     cache: false,
     success: function (data) {
         $('#_index_ticket_report').html(data);
     }
-});
+    });

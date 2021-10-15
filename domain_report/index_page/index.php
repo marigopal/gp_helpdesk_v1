@@ -22,7 +22,7 @@ include ("../../include/menu/menu.php");
                         <table class="table table-hover" style="padding-bottom: 50px;" id="_index_primary_domain_table">
                             <thead>
                                 <tr>
-                                    <th>Sl No</th>
+                                    <th>#</th>
                                     <th hidden="">Unique ID</th>
                                     <th>Vendor</th>
                                     <th>Account Number</th>

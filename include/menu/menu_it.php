@@ -51,7 +51,8 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/ssl_report/index_page/index"><i class="fa fa-circle-o"></i>SSL Product List</a></li>
-                    <li><a href="/server_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
+                    <li><a href="/ssl_report/index_page/index_ssl_domain_list"><i class="fa fa-circle-o"></i>SSL Domain List</a></li>
+                    <!--<li><a href="/server_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>-->
                 </ul>
             </li>
 <!--            
