@@ -151,7 +151,7 @@ include ("../../include/menu/menu.php");
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+<!--            <div class="col-md-6">
                  <div class="box box-widget widget-user-2">
                     
                     <div class="widget-user-header  bg-red-gradient">
@@ -177,7 +177,7 @@ include ("../../include/menu/menu.php");
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             
         </div>
         <div class="row">
