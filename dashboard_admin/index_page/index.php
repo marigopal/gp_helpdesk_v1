@@ -151,7 +151,7 @@ include ("../../include/menu/menu.php");
                     </div>
                 </div>
             </div>
-<!--            <div class="col-md-6">
+            <div class="col-md-6">
                  <div class="box box-widget widget-user-2">
                     
                     <div class="widget-user-header  bg-red-gradient">
@@ -164,8 +164,8 @@ include ("../../include/menu/menu.php");
                                     <tr>
                                         <th>#</th>
                                         <th>Vendor</th>
-                                        <th>Account No</th>
-                                        <th>Server Name</th>
+                                        <th>Billed For</th>
+                                        <th>Payment Method</th>
                                         <th>Expiration Date</th>
                                         <th>Web Link</th>
                                     </tr>
@@ -177,7 +177,7 @@ include ("../../include/menu/menu.php");
                         </div>
                     </div>
                 </div>
-            </div>-->
+            </div>
             
         </div>
         <div class="row">

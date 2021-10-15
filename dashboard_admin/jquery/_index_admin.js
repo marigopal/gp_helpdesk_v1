@@ -28,6 +28,16 @@ $.ajax
                 $('#_ssl_renewal_report').html(data);
             }
         });
+        $.ajax
+        ({
+            url: "../viewlist_page/report_monthly_renewals",
+            type: "POST",
+            cache: false,
+            success: function (data)
+            {
+                $('#_monthly_renewal_report').html(data);
+            }
+        });
         $.ajax({
     url: "../viewlist_page/_index_ticket_viewlist",
     type: "POST",
