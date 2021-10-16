@@ -656,3 +656,62 @@
         </div>
     </div>
 </div>
+<!-- Renewal for monthly. -->
+<div class="modal fade" id="renewed_monthly_model_box">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Renewed Monthly</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="monthly_renewal_id" id="monthly_renewal_id" placeholder="" readonly="">
+                            <span id="monthly_renewal_id_check" class="help-block"></span>
+                        </div>
+                        <div class="form-group col-md-6 ">
+                            <label for="exampleInputEmail1">Next Renewal Date [YYYY-MM-DD]</label>
+                            <input type="text" class="form-control" id="monthly_next_renewal" name="monthly_next_renewal" value="<?php echo date("Y-m-d") ?>" onclick="input_remove_error_notification('monthly_next_renewal');">
+
+                            <span id="monthly_next_renewal_check" class="help-block"></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="monthly_renewed_model_box_save_button">Save changes</button>
+                <span id="success_done" class="help-block"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Delete monthly model box -->
+<div class="modal modal-danger fade" id="delete_monthly_renewal_model_box">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Are you sure..! You want to Delete..? </h4>
+              </div>
+                <div class="form-group col-md-6" hidden="">
+                            <label for="exampleInputEmail1">ID</label>
+                            <input type="text" class="form-control" name="delete_monthly_renewal_id" id="delete_monthly_renewal_id" placeholder="" readonly="">
+                            <span id="delete_monthly_renewal_id_check" class="help-block"></span>
+                        </div>
+                
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="delete_monthly_save_button" name="delete_monthly_save_button">Yes</button>
+                <button type="button" class="btn btn-outline" data-dismiss="modal">No</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>

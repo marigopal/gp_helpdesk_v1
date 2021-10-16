@@ -22,6 +22,9 @@ include ("../../include/menu/menu.php");
                         <table class="table table-hover" style="padding-bottom: 50px;" id="_index_primary_domain_table">
                             <thead>
                                 <tr>
+                                <th>
+                                            <input type="checkbox"  id="selectAll" value="" />
+                                        </th>
                                     <th>#</th>
                                     <th hidden="">Unique ID</th>
                                     <th>Vendor</th>
@@ -36,6 +39,24 @@ include ("../../include/menu/menu.php");
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="col-xs-2">
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="text" class="form-control" id="bulk_delete_expired_date" name="bulk_delete_expired_date" onclick="input_remove_error_notification('bulk_delete_expired_date');">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                    <span id="bulk_delete_expired_date_check" class="help-block"></span>
+                </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn  btn-danger " name="bulk_renewal_button" id="bulk_renewal_button">Bulk Renewal</button>
+                    <button type="button" class="btn  btn-danger " name="bulk_delete_button" id="bulk_delete_button">Bulk Delete</button>
+                    <span id="bulk_renewal_button_check" class="help-block"></span>
                 </div>
             </div>
         </div>
