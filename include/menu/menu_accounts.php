@@ -54,6 +54,19 @@
                     <li><a href="/server_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-calculator"></i> <span>Monthly Renewals</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/monthly_report/index_page/index"><i class="fa fa-circle-o"></i>Dashboard</a></li>
+                    
+                    <!--<li><a href="/server_report/index_page/logs"><i class="fa fa-circle-o"></i>Logs</a></li>-->
+                </ul>
+            </li>
 <!--            
             
             <li class="treeview">
