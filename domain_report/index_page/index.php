@@ -9,7 +9,7 @@ include ("../../include/menu/menu.php");
             <li class="active">Primary Domain Dashboard</li>
         </ol>
     </section>
-    <?php include ('domain_widget_page.php'); ?>
+    <!-- <?php include ('domain_widget_page.php'); ?> -->
     <section class="content">
         <div class="row">
             <div class="col-xs-12">

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../../include/lib_page.php';
 $day = date('Y-m-d', strtotime(' +10 day'));
 $sno = 0;
@@ -18,5 +18,5 @@ if ($result->num_rows > 0) {
         </tr>
         <?php
     }
-} mysqli_close($conn);
+} mysqli_close($con);
 ?>  
