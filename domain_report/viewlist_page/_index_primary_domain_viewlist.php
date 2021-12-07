@@ -19,31 +19,19 @@ if ($result->num_rows > 0) {
             <td><?php echo $row[15]; ?></td>
             <td><?php echo $row[18]; ?></td>
             <td>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a  data-toggle="modal" data-target="#renewed_model_box"
-                                        onclick="
-                                                $('#renewal_id').val('<?= $row[0]; ?>')
-                                                $('#next_renewal').val('<?= $row['expiredate'] ?>');
-                                        ">Renewed</a></li>
-                                        <li><a href="../edit_domain/edit_primary_domain?id=<?php echo encrypt($row[0]); ?>">Edit</a></li>
-                                        <li><a  data-toggle="modal" data-target="#delete_model_box_domain" 
-                                onclick="
-                                        $('#delete_id_domain').val('<?php echo $row[0]; ?>');
-                                         $('#domain').val('<?php echo $row[11]; ?>');
-                                        $('#sub_domain').val('<?php echo $row[12]; ?>');
-                                            ">
-                                       
-                                Delete</a></li>
-                                        <!--<li><a href="../db_page/_delete_primary_domain?id=<?php echo encrypt($row[0]); ?> &domain=<?php echo encrypt($row[11]); ?>">Delete</a></li>-->
-                            </ul>
-                        </div> 
-                    </td>
+                <a  data-toggle="modal" data-target="#renewed_model_box" onclick="
+                                $('#renewal_id').val('<?= $row[0]; ?>')
+                                $('#next_renewal').val('<?= $row['expiredate'] ?>');
+                    "><i class="fa fa-retweet"></i></a>
+                <a href="../edit_domain/edit_primary_domain?id=<?php echo encrypt($row[0]); ?>"><i class="fa fa-edit"></i></a>
+                <a  data-toggle="modal" data-target="#delete_model_box_domain" onclick="
+                                $('#delete_id_domain').val('<?php echo $row[0]; ?>');
+                                $('#domain').val('<?php echo $row[11]; ?>');
+                                $('#sub_domain').val('<?php echo $row[12]; ?>');
+                    "><i class="fa fa-trash"></i></a>
+            </td>
         </tr>
         <?php
     }
 } mysqli_close($con);
-?>
-  
+?>  

@@ -36,10 +36,10 @@ include ("../../include/menu/menu.php");
                                         <th>Account Number</th>
                                         <th>Server Type</th>
                                         <th>Server Name</th>
-                                        <th>IP Address</th>
+                                        <th >IP Address</th>
                                         <th>Expiration Date</th>
                                         <th>Username</th>
-                                        <th>Action</th>
+                                        <th width="10%">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody id="_server_report">

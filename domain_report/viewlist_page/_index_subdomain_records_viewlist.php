@@ -21,22 +21,12 @@ if ($result->num_rows > 0) {
             <td><?php echo $row[5]; ?></td>
             <td><?php echo $row[6]; ?></td>
             <td>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li> <a href="../edit_domain/edit_subdomain_records?id=<?php echo encrypt($row[0]); ?>">Edit</a></li>
-                        <li><a  data-toggle="modal" data-target="#delete_model_box_domain" 
-                                onclick="
-                                        $('#delete_id_domain').val('<?php echo $row[0]; ?>');
-                                         $('#domain').val('<?php echo $row[4]; ?>');
-                                        $('#sub_domain').val('<?php echo $row[5]; ?>');
-                                            ">
-                                       
-                                Delete</a></li>
-<!--                        <li><a href="index_delete_subdomain?id=<?php echo encrypt($row[0]); ?>&domain=<?php echo encrypt($row[5]); ?>&subdomain=<?php echo encrypt($row[6]); ?>">Delete</a></li>-->
-                    </ul>
-                </div> 
+                <a href="../edit_domain/edit_subdomain_records?id=<?php echo encrypt($row[0]); ?>"><i class="fa fa-edit"></i></a>
+                <a  data-toggle="modal" data-target="#delete_model_box_domain" onclick="
+                                $('#delete_id_domain').val('<?php echo $row[0]; ?>');
+                                $('#domain').val('<?php echo $row[4]; ?>');
+                                $('#sub_domain').val('<?php echo $row[5]; ?>');
+                    "><i class="fa fa-trash"></i></a>
             </td>
         </tr>
         <?php
@@ -44,4 +34,3 @@ if ($result->num_rows > 0) {
 }
 mysqli_close($con);
 ?>
-  

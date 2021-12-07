@@ -16,27 +16,9 @@ if ($result->num_rows > 0) {
             <td><?php echo $row[7]; ?></td>
             <td><?php echo $row[9]; ?></td>
             <td>
-            <a  data-toggle="modal" data-target="#show_password_model_box" onclick="$('#pass').val('<?php echo decrypt($row[8]); ?>')"><i class="fa fa-eye"></i></a>
-            <a href="../edit_vendor/index?id=<?php echo encrypt($row[0]); ?> "><i class="fa fa-edit"></i></a>
-            <a  data-toggle="modal" data-target="#delete_model_box" 
-                                onclick="
-                                        $('#delete_id').val('<?php echo $row[0]; ?>')"><i class="fa fa-trash"></i></a>
-                <!-- <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a  data-toggle="modal" data-target="#show_password_model_box" 
-                                onclick="
-                                        $('#pass').val('<?php echo decrypt($row[8]); ?>')">
-                                Show Password</a></li>
-                                <li><a href="../edit_vendor/index?id=<?php echo encrypt($row[0]); ?> ">Edit</a></li>
-                                <li><a  data-toggle="modal" data-target="#delete_model_box" 
-                                onclick="
-                                        $('#delete_id').val('<?php echo $row[0]; ?>')">
-                                Delete</a></li>
-                                <!-- <li><a href="../db_page/_delete_vendor_update?id=<?php echo encrypt($row[0]); ?> ">Delete</a></li> -->
-                    </ul>
-                </div>  
+                <a  data-toggle="modal" data-target="#show_password_model_box" onclick="$('#pass').val('<?php echo decrypt($row[8]); ?>')"><i class="fa fa-eye"></i></a>
+                <a href="../edit_vendor/index?id=<?php echo encrypt($row[0]); ?> "><i class="fa fa-edit"></i></a>
+                <a  data-toggle="modal" data-target="#delete_model_box" onclick="$('#delete_id').val('<?php echo $row[0]; ?>')"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
         <?php

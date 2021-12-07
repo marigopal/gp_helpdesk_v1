@@ -28,19 +28,12 @@ include '../../include/lib_page.php';
                          
                        
                         <td>
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Choose
-                                            <span class="caret"></span></button>
-                                        <ul class="dropdown-menu">
-                                            <li><a  data-toggle="modal" data-target="#change_ssl_domain_name_model_box_server" 
+                            <a  data-toggle="modal" data-target="#change_ssl_domain_name_model_box_server" 
                                                 onclick="
                                                     $('#change_ssl_domain_name_id').val('<?php echo $row[0]; ?>');
                                                     $('#change_ssl_domain_name').val('<?php echo $row[2]; ?>');
-                                                ">Change Domain Name
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div> 
+                                                "><i class="fa fa-retweet"></i></a>
+                             
                         </td>
                 </tr>
 <?php	

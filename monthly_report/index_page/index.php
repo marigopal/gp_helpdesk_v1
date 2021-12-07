@@ -9,7 +9,6 @@ include ("../../include/menu/menu.php");
             <li class="active">Monthly Renewals Report</li>
         </ol>
     </section>
-    <?php include ('domain_widget_page.php'); ?>
     <section class="content">
         <div class="row">
             <div class="col-xs-12">
@@ -22,9 +21,9 @@ include ("../../include/menu/menu.php");
                         <table class="table table-hover" style="padding-bottom: 50px;" id="_index_primary_domain_table">
                             <thead>
                                 <tr>
-                                <th>
-                                            <input type="checkbox"  id="selectAll" value="" />
-                                        </th>
+                                    <th>
+                                        <input type="checkbox"  id="selectAll" value="" />
+                                    </th>
                                     <th>#</th>
                                     <th hidden="">Unique ID</th>
                                     <th>Vendor</th>
